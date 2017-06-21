@@ -134,7 +134,7 @@ module.exports = {
      *
      * */
     externals: {
-        jquery: 'window.jQuery',
+        jquery: 'window.jQuery'
         // Handlebars:"window.Handlebars"
     }
 };

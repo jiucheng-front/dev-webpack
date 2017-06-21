@@ -6,7 +6,6 @@
 */
 
 'use strict';
-//引入handlebars
 import Handlebars from "./handlebars";
 // AJAX
 var xhrRequest=new XMLHttpRequest();
@@ -107,7 +106,7 @@ function createHTML(userData){
 	var containerBox=document.getElementById('users-one');
 	// 追加到DOM树上
 	containerBox.innerHTML=usersHtml;
-	// 
+	//
 	addEvent();
 }
 
@@ -121,7 +120,7 @@ function addEvent(){
 		lists.addEventListener("click",function(e){
 			event.preventDefault();
 			event.stopPropagation();
-			// 
+			//
 			var pfid=this.getAttribute("data-pfid");
 			var nickname=this.getAttribute('data-nickname');
 			var liveid=this.getAttribute('data-liveid');
@@ -135,7 +134,7 @@ function addEvent(){
 				// 进入直播间
 				// h5toRoom(pfid,nickname,liveid,liveurl,livekey,direction);
 				alert("进入直播间");
-			// 如果没在直播，进入个人主页	
+			// 如果没在直播，进入个人主页
 			}else{
 				// h5toHomepage(pfid,nickname);
 				alert("进入个人主页");

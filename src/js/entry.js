@@ -1,5 +1,4 @@
-require("./flexible.js");
+require("./flexible");
 require("../styles/base.css");
 require("../styles/container.css");
-// require("../styles/test_mixin.scss");
-require("./main");
+// require("./main");

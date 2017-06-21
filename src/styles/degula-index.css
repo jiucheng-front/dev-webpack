@@ -36,7 +36,7 @@
 .nav-bar{
 	width: 8.906667rem;
 	height: 0.88rem;
-	background-image: url(/html/degula/images/nav_bg.png);
+	background-image: url(/html/degulaOne/images/nav_bg.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
@@ -61,25 +61,25 @@
 	position: absolute;
 	height: 60%;
 	width: 1px;
-	background: url(/html/degula/images/headlineoff.png) left center;
+	background: url(/html/degulaOne/images/headlineoff.png) left center;
 	left: 0;
 	top: 20%;
 }
 .nav-bar ul li.on{
 	color: #fff;
-	background-image: url(/html/degula/images/selected_bg.png);
+	background-image: url(/html/degulaOne/images/selected_bg.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }
 .nav-bar ul li.on b{
-	background-image: url(/html/degula/images/headlineon.png);
+	background-image: url(/html/degulaOne/images/headlineon.png);
 }
 /* container */
 .container{
     /*padding-bottom: .4rem;*/
 }
 .main-box{
-	background-image: url(/html/degula/images/middle_img02.jpg);
+	background-image: url(/html/degulaOne/images/middle_img02.jpg);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
   padding-bottom: .4rem;
@@ -109,7 +109,7 @@
 	height: 1.866667rem;
 	padding-left: 0.32rem;
 	position: relative;
-  background: url(/html/degula/images/repeat_x.png) repeat-x bottom;
+  background: url(/html/degulaOne/images/repeat_x.png) repeat-x bottom;
 }
 .main ul li:before{
 	display: table;
@@ -163,7 +163,7 @@
     position: absolute;
     width: 80%;
     height: 30%;
-    background-image: url(/html/degula/images/isliving.png);
+    background-image: url(/html/degulaOne/images/isliving.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     left: 50%;
@@ -194,7 +194,7 @@
   right: 0.293333rem;
   text-align: center;
   line-height: 0.72rem;
-  background-image: url(/html/degula/images/follow_bg.png);
+  background-image: url(/html/degulaOne/images/follow_bg.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -276,7 +276,7 @@ header img,
 }
 /* 0503 */
 .rule-msg{
-    background-image: url(/html/degula/images/footer_bg.jpg);
+    background-image: url(/html/degulaOne/images/footer_bg.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     padding-bottom: 0.6rem;
@@ -307,11 +307,11 @@ header img,
     border: 0;
 }
 .main ul li i.promotion{
-	background-image: url(/html/degula/images/end_img02.png);
+	background-image: url(/html/degulaOne/images/end_img02.png);
 }
 .main ul li i.out{
-	background-image: url(/html/degula/images/end_img01.png);
+	background-image: url(/html/degulaOne/images/end_img01.png);
 }
 .main ul li i.nothing{
-	background-image: url(/html/degula/images/end_img03.png);
+	background-image: url(/html/degulaOne/images/end_img03.png);
 }

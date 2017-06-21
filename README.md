@@ -9,3 +9,7 @@
 + tsconfig.json：编译TypeScript的配置参数。编译后让多数浏览器都支持的javascript
 + webpack.confog.js：webpack的配置文件！最重要的一个！！
 + .html和.ejs都是HTML的模板样式，最终会自动添加到指定的活动内
+
+### 使用
++ 如：德古拉(degula_old.js)
+  + npm run start :就会自动打包到build文件夹下面，在复制到root/html/degulaOne/下，即完成！

@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wjf444128852.git"
+    "url": "git@github.com:wjf444128852/langlive-webpack.git"
   },
   "author": "nine",
   "license": "ISC",
@@ -36,7 +36,6 @@
     "webpack": "^2.2.1"
   },
   "dependencies": {
-    "flexible": "^0.1.20",
     "handlebars": "^4.0.8",
     "jquery": "^3.2.1"
   }

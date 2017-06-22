@@ -16,11 +16,17 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 //6 把css抽离
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+// var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
 const path = require("path");
 
 module.exports = {
     //1 配置入口
-    entry: './src/js/entry.js',
+    // entry: './src/js/entry.js',
+    // 多入口
+    entry:{
+      main:"./src/js/entry.js"
+      // vendor:["jquery"]
+    },
     //2 配置出口（打包的输出路径）
     output: {
         path: __dirname + '/build',
@@ -92,6 +98,10 @@ module.exports = {
     //5 配置HTML模板插件
     // 这样 webpack 编译的时候回自动在output目录下生成index.html
     plugins: [
+        // 提取JQ ？
+        // new webpack.optimize.CommonsChunkPlugin({
+        //       name: 'vendor'
+        // }),
         new HtmlWebpackPlugin({
             //4.1配置参数,html的title
             title: '德古拉的晚餐',

@@ -14,3 +14,7 @@ require("../styles/degula-index.css");
 
 // 三、页面逻辑
 require("./degula_old.js");
+
+// 四、测试Jquery
+// var $=require("jquery");
+// console.log($);

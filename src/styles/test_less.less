@@ -1,0 +1,13 @@
+// 2种方式嵌套less
+// @import "./less_mixin.less";
+@import url("./less_mixin.less");
+//----測試HTML 片段
+
+// <div class="test_less">
+//   <h3>測試LESS</h3>
+// </div>
+
+// 測試
+.test_less h3{
+  color: @red;
+}

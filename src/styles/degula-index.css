@@ -91,12 +91,6 @@
 .content{
 	position: relative;
 }
-.backTop{
-	position: fixed;
-	width: 0.653333rem;
-	right: 0.266667rem;
-	bottom: 0.666667rem;
-}
 /* main */
 .main{
 	width: 8.933333rem;
@@ -314,4 +308,15 @@ header img,
 }
 .main ul li i.nothing{
 	background-image: url(/html/degulaOne/images/end_img03.png);
+}
+/*goTop*/
+.goTop{
+	width: .65rem;
+	height: .95rem;
+	position: fixed;
+  right: 0.266667rem;
+  bottom: 0.666667rem;
+	background-image: url(/html/degulaOne/images/top.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
 }

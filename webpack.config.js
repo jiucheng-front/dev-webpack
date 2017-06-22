@@ -47,10 +47,10 @@ module.exports = {
             }
         }
     },
-    //5 引入loaders
+    //4 引入loaders
     module: {
         rules: [
-            //5.1 解析css,css-loader
+            //4.1 解析css,css-loader
             {
                 test: /\.css$/,
                 //loader:'style-loader!css-loader'
@@ -60,7 +60,7 @@ module.exports = {
                     use: 'css-loader',
                 })
             },
-            { //5.2.SASS的.scss 文件使用 style-loader、css-loader 和 sass-loader 来编译处理
+            { //4.2.SASS的.scss 文件使用 style-loader、css-loader 和 sass-loader 来编译处理
                 test: /\.scss$/,
                 //loader: 'style-loader!css-loader!sass-loader'
                 // 6.2 想抽离出来得
@@ -71,6 +71,17 @@ module.exports = {
                         "sass-loader"
                     ]
                 })
+            },
+            // 4.3 引入less-loader,编译less
+            {
+              test:/\.less$/,
+              use:ExtractTextPlugin.extract({
+                fallback:"style-loader",
+                use:[
+                  "css-loader",
+                  "less-loader"
+                ]
+              })
             },
             //11 处理图片
             {

@@ -366,7 +366,9 @@
   		javascriptinterface.langWeb2App_openActivity('com.lang.lang.ui.activity.room.YunfanLiveActivity','{"pfid":"'+pfid+'","nickname":"'+nickname+'","live_id":"'+liveid+'","stream_direction":"'+direction+'"}')
   	}
   }
-
-
+    // JQ：結合externals配置項，且html內先引入JQ
+    // var $=require("jquery");
+    // var s=$("#users-one").html();
+    // console.log(s);
 
 }();

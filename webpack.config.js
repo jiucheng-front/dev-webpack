@@ -131,7 +131,7 @@ module.exports = {
     //10 项目依赖的外部文件，如jQuery
     /*10.1 这样配置之后，最后就不会把jquery打包到build.js里，而且
      * var $=require('jquery');这样仍然可以用
-     *
+     *但是需要在html模板內先引入jquery如：<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
      * */
     externals: {
         jquery: 'window.jQuery'

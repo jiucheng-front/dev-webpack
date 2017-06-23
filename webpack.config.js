@@ -8,7 +8,7 @@
 //7 压缩合并JS
 //8 用babel编译es6,需要创建.babelrc文件
 //9 external外部配置文件(开发依赖)，例如项目用到jQuery
-//10 url-loader处理图片
+//10 url-loader处理图片为base64
 
 var webpack = require('webpack');
 //4 配置HTML 模板 ,插件
@@ -86,7 +86,7 @@ module.exports = {
                 ]
               })
             },
-            //10 处理图片
+            //10 处理图片,图片路径需是相对路径才能看到效果
             {
                 test: /\.(jpg|png|gif|svg)$/,
                 use: {

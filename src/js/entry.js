@@ -12,8 +12,14 @@ require("../styles/degula-index.css");
 // require("../styles/test_less.less");
 // require("../styles/test_scss.scss");
 
+
+
+
 // 三、页面逻辑
 require("./degula_old.js");
+// 3.2 模塊化
+// var degula=require("./degula_module");
+// degula.init();
 
 // 四、测试Jquery
 // var $=require("jquery");

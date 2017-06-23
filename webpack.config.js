@@ -46,13 +46,22 @@ module.exports = {
     //4 引入loaders
     module: {
         rules: [
-            //4.1 解析css,css-loader
+            //4.1 解析压缩css,css-loader，
             {
                 test: /\.css$/,
                 // 6.2 想抽离出来得
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
-                    use: 'css-loader',
+                    // use: 'css-loader',
+                    use:[
+                      {
+                        loader: 'css-loader',
+                        // 压缩CSS
+                        options:{
+                          minimize: true
+                        }
+                      }
+                    ]
                 })
             },
             { //4.2.SASS的.scss 文件使用 style-loader、css-loader 和 sass-loader 来编译处理

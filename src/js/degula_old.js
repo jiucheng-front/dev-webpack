@@ -190,7 +190,7 @@
           }, 10);
       };
       function set() {
-          btn.style.display = (d.scrollTop + b.scrollTop > 100) ? 'block': "none"
+          btn.style.display = (d.scrollTop + b.scrollTop > 100) ? 'block': "none";
       }
   };
   backTop('goTop');

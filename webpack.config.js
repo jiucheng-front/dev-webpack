@@ -21,12 +21,12 @@ const path = require("path");
 
 module.exports = {
     //1 配置入口
-    // entry: './src/js/entry.js',
+    entry: './src/js/entry.js',
     // 多入口
-    entry:{
-      main:"./src/js/entry.js"
-      // vendor:["jquery"]
-    },
+    // entry:{
+    //   main:"./src/js/entry.js"
+    //   // vendor:["jquery"]
+    // },
     //2 配置出口（打包的输出路径）
     output: {
         path: __dirname + '/build',

@@ -25,7 +25,7 @@ header,
   background-size: 100% 100%;
   position: absolute;
   left: .4rem;
-  top: .4rem;
+  top: .6rem;
   z-index: 10;
 }
 .backTop{
@@ -226,22 +226,24 @@ header,
 
 // prophet-content
 .prophet-content,
-.prophet-content li,
+.prophet-content>li,
 .prophet-middle-bg,
 .prophet-info-bg{
 	width: 100%;
 	background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-.prophet-content li:nth-child(1){
+.prophet-content>li:nth-child(1){
 	height: 5.87rem;
 	background-image: url(/html/draculaDinner/images/prophet_bg01.jpg);
+	padding-top: .24rem;
 }
-.prophet-content li:nth-child(2){
+.prophet-content>li:nth-child(2){
 	height: 6.13rem;
 	background-image: url(/html/draculaDinner/images/prophet_bg02.jpg);
+	padding-top: .4rem;
 }
-.prophet-content li:nth-child(3){
+.prophet-content>li:nth-child(3){
 	height: 5.2rem;
 	background-image: url(/html/draculaDinner/images/prophet_bg03.jpg);
 }
@@ -251,6 +253,99 @@ header,
 	background-image: url(/html/draculaDinner/images/prophet_bg04.jpg);
 }
 .prophet-info-bg{
-	height: 2.21rem;
 	background-image: url(/html/draculaDinner/images/prophet_bg05.jpg);
+}
+// same-title
+.same-title{
+	overflow: hidden;
+	width: 8.8rem;
+	margin: 0 auto;
+}
+.same-title span{
+	display: block;
+	float: left;
+	width: 3.07rem;
+	height: .93rem;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+	margin-left: .23rem;
+}
+.same-title p{
+	float: right;
+	color: #F3E4C2;
+	line-height: .93rem;
+	margin-right: .8rem;
+}
+.icon-one-before{
+	background-image: url(/html/draculaDinner/images/small_icon_a01.png);
+}
+.icon-two-before{
+	background-image: url(/html/draculaDinner/images/small_icon_b01.png);
+}
+.icon-three-before{
+	background-image: url(/html/draculaDinner/images/small_icon_a01.png);
+}
+.icon-three-end{
+	background-image: url(/html/draculaDinner/images/small_icon_c02.png);
+}
+// prophet-lists
+.prophet-lists{
+	width: 7.6rem;
+	margin: 0 auto;
+}
+// .prophet-lists>li{
+// 	overflow: hidden;
+// }
+.prophet-lists>li:before,
+.prophet-lists>li:after{
+	display: table;
+	content: "";
+	clear: both;
+}
+.same-camp{
+	width: 2.35rem;
+	height: 3.17rem;
+	background-repeat: no-repeat;
+  background-size: 100% 100%;
+	position: relative;
+}
+.same-camp-info{
+	text-align: center;
+	color: #fff;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	bottom:-0.03rem;
+}
+.same-camp-info h3,
+.same-camp-info p{
+	font-size: .27rem;
+}
+.prophet-left{
+	float: left;
+}
+.prophet-left .same-camp{
+	border: 1px solid #DF8728;
+	background-image: url(/html/draculaDinner/images/camp_01.png);
+	box-shadow:0 0 5px 2px rgba(242,242,113,.5);
+}
+.prophet-right{
+	float: right;
+}
+.prophet-right .same-camp{
+	border: 1px solid rgb(213,38,48);
+	background-image: url(/html/draculaDinner/images/camp_02.png);
+	box-shadow:0 0 5px 2px rgba(213,38,48,.5);
+}
+// prophet-btn
+.prophet-btn{
+	display: block;
+  width: 1.68rem;
+  height: .51rem;
+  margin: 0 auto;
+  line-height: .51rem;
+  text-align: center;
+  background-color: #7585DE;
+  border-radius: .3rem;
+  margin-top: .4rem;
 }

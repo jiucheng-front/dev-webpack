@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>德古拉的晚餐</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+  <meta name="description" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="cleartype" content="on" />
+  <script>
+      var token = '<?=$token;?>';
+      var pfid = '<?=$pfid;?>';
+      var share_url_head = '<?=$share_url_head;?>';
+      var anchor_id='<?=$anchor_id;?>';
+  </script>
+</head>
+<body>
+    <!-- 返回顶部 -->
+    <div id="backTop" class="backTop"></div>
+    <!-- 正文 -->
+    <div class="container">
+       <header>
+         <span id="following"></span>
+         <div id="ruleBtn" class="rule-btn"></div>
+         <img src="/html/draculaDinner/images/degula_header.jpg" alt="" class="block">
+       </header>
+       <div class="nav">
+         <ul class="nav-list">
+           <li class="js-nav-btn selected">人氣星星換金幣</li>
+           <li class="js-nav-btn">我是預言家</li>
+         </ul>
+       </div>
+       <div id="content" class="content">
+         <!-- 用户 -->
+         <div class="js-item show"></div>
+         <!-- 预言家 -->
+         <div class="js-item"></div>
+       </div>
+    </div>
+    <!--游戏规则  -->
+    <div id="rule" class="rule"></div>
+</body>
+</html>

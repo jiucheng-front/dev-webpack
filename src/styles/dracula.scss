@@ -1,0 +1,106 @@
+*{
+	margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 0;
+  box-sizing: border-box;
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+// header
+header,
+.nav{
+  position: relative;
+}
+.block{
+  display: block;
+  width: 100%;
+}
+#following{
+  display: block;
+  width: 2rem;
+  height: .67rem;
+  background-image: url(/html/draculaDinner/images/top_followbg.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left: .4rem;
+  top: .4rem;
+  z-index: 10;
+}
+.rule-btn{
+  width: 1.6rem;
+  height: 1.6rem;
+  background-image: url(/html/draculaDinner/images/rule_btnbg.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  right: .13rem;
+  bottom: -1.2rem;
+  z-index: 10;
+}
+// nav
+.nav{
+  width: 100%;
+  height: 2rem;
+  background-image: url(/html/draculaDinner/images/degula_bg01.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.nav-list{
+  width: 7.47rem;
+  height: 1.6rem;
+  float: left;
+  position: relative;
+  margin-left: .6rem;
+}
+.nav-list li{
+  width: 3.79rem;
+  height: .88rem;
+  line-height: .88rem;
+  text-align: center;
+  font-size: .35rem;
+  color: #78516B;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: .11rem;
+}
+.nav-list li:nth-child(1){
+  background-image: url(/html/draculaDinner/images/tab_leftbg_01.png);
+  left: 0;
+}
+.nav-list li:nth-child(2){
+  background-image: url(/html/draculaDinner/images/tab_rightbg_01.png);
+  left: 3.7rem;
+}
+.nav-list li.selected{
+  color:#C49DFF;
+  top: 0;
+}
+.nav-list li:nth-child(1).selected{
+  background-image: url(/html/draculaDinner/images/tab_leftbg_02.png);
+}
+.nav-list li:nth-child(2).selected{
+  background-image: url(/html/draculaDinner/images/tab_rightbg_02.png);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+.show{
+  display: block;
+}
+.hide{
+  display: none;
+}

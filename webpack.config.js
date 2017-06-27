@@ -118,7 +118,7 @@ module.exports = {
             // 4.2 输出后html的名字，可以自定义
             filename: 'index.html',
             //4.3 html的模板,也可以是xxx.html
-            template: 'degula.temp.html'
+            template: 'degula.index.html'
         }),
         //7 代码优化：合并以及压缩代码
         // 开发环境暂时不需要

@@ -28,6 +28,17 @@ header,
   top: .4rem;
   z-index: 10;
 }
+.backTop{
+	position: fixed;
+	width: 0.653333rem;
+	height: .95rem;
+	right: 0.266667rem;
+	bottom: 0.666667rem;
+	background-image: url(/html/draculaDinner/images/top.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+	z-index: 20;
+}
 .rule-btn{
   width: 1.6rem;
   height: 1.6rem;
@@ -84,23 +95,162 @@ header,
 .nav-list li:nth-child(2).selected{
   background-image: url(/html/draculaDinner/images/tab_rightbg_02.png);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
+// .content-item
+.content-item{
+	display: none;
+}
 //
-.show{
+.show,
+.content-item.show{
   display: block;
 }
 .hide{
   display: none;
+}
+// users-list
+.user-bg{
+	background-image: url(/html/draculaDinner/images/degula_bg02.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+// user-title
+.user-title{
+	width: 7.8rem;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-top: .4rem;
+}
+.user-title li:nth-child(1){
+	float: left;
+	font-size: .35rem;
+	color: #fff;
+}
+.user-title li:nth-child(2){
+	float: right;
+	color: #A68CC9;
+	// font-size: .27rem;
+}
+// user-lists
+.user-lists{
+	width: 8.8rem;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.user-lists li{
+	width: 2.93rem;
+	float: left;
+	position: relative;
+	padding: .1rem 0;
+	margin-top: .67rem;
+}
+.user-img{
+	width: 1.52rem;
+	margin: 0 auto;
+	height: 1.52rem;
+	border-radius: 50%;
+	cursor: pointer;
+	background-image: url(/html/draculaDinner/images/user_bg.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+	position: relative;
+	box-shadow: 3px 0 5px #000;
+}
+.user-img img{
+	width: 94%;
+  height: 94%;
+  position: absolute;
+  border-radius: 50%;
+  cursor: pointer;
+	top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	padding: 2%;
+}
+.user-lists li p{
+	color: #80737A;
+	text-align: center;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 90%;
+	margin: 0 auto;
+	margin-top: .05rem;
+  line-height: .4666666rem;
+}
+.user-lists li span{
+	display: block;
+	width: 1.68rem;
+	height: .51rem;
+	margin: 0 auto;
+	line-height: .51rem;
+	text-align: center;
+	background-color: #7585DE;
+	border-radius: .3rem;
+	margin-top: .1rem;
+}
+// user-footer
+.user-middle-bg{
+	width: 100%;
+	height: 1.79rem;
+	background-image: url(/html/draculaDinner/images/degula_bg03.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.user-description-bg{
+	background-image: url(/html/draculaDinner/images/degula_bg04.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.user-doc{
+	width: 8.8rem;
+	margin: 0 auto;
+	padding: .4rem .67rem 0 .67rem;
+}
+.user-doc h3{
+	color: #fff;
+	font-size: .35rem;
+}
+.user-doc p{
+	color: #9699AD;
+}
+// user-footer-bg
+.user-footer-bg{
+	width: 100%;
+	height: 1.89rem;
+	background-image: url(/html/draculaDinner/images/degula_bg05.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+
+
+// prophet-content
+.prophet-content,
+.prophet-content li,
+.prophet-middle-bg,
+.prophet-info-bg{
+	width: 100%;
+	background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.prophet-content li:nth-child(1){
+	height: 5.87rem;
+	background-image: url(/html/draculaDinner/images/prophet_bg01.jpg);
+}
+.prophet-content li:nth-child(2){
+	height: 6.13rem;
+	background-image: url(/html/draculaDinner/images/prophet_bg02.jpg);
+}
+.prophet-content li:nth-child(3){
+	height: 5.2rem;
+	background-image: url(/html/draculaDinner/images/prophet_bg03.jpg);
+}
+
+.prophet-middle-bg{
+	height: 1.01rem;
+	background-image: url(/html/draculaDinner/images/prophet_bg04.jpg);
+}
+.prophet-info-bg{
+	height: 2.21rem;
+	background-image: url(/html/draculaDinner/images/prophet_bg05.jpg);
 }

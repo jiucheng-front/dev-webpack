@@ -1,0 +1,102 @@
+{
+    "ret_code": "0",
+    "ret_msg": "ok",
+    "data": {
+        "my": {
+            "follow_status": 0,
+            "pfid": 1000048
+        },
+        "star": {
+            "vote_result": [
+                {
+                    "pfid": 1000010,
+                    "count": 3,
+                    "nickname": "gggggg",
+                    "headimg": "http://playback-langlive.ufile.ucloud.com.cn/f9cb7d8ac961fb9b3d5a882aea55bfe5"
+                },
+                {
+                    "pfid": 1000049,
+                    "count": 0,
+                    "nickname": "思考解决",
+                    "headimg": "http://playback-langlive.ufile.ucloud.com.cn/6b7f50b02ed10b72159ccf1f00a73ab9.jpg"
+                },
+                {
+                    "pfid": 1000012,
+                    "count": 0,
+                    "nickname": "c224002",
+                    "headimg": "http://playback-langlive.ufile.ucloud.com.cn/96c2699b82f331b7b2ec650d618f73c14059e4b335abea799dda81ac4152235a"
+                },
+                {
+                    "pfid": 1000052,
+                    "count": 0,
+                    "nickname": "upper",
+                    "headimg": "http://wx.qlogo.cn/mmopen/iaHbM9ooWbEmpO332Yibc7Ie8t0kCg7I47tLhhbpMCibTcwscIPct5ujicrSaw0tmUvPBHibq6aG6h8glQBSOlg3Jpul3m64ia1nYU/0"
+                },
+                {
+                    "pfid": 1000830,
+                    "count": 0,
+                    "nickname": "58665",
+                    "headimg": "http://playback-langlive.ufile.ucloud.com.cn/a765a85a32fde0343476d3d5a54ce686d9370cd4e35f4ac941661c2ab6746bcd"
+                },
+                {
+                    "pfid": 1000040,
+                    "count": 0,
+                    "nickname": "🐾\"sting\"💤",
+                    "headimg": "http://playback-langlive.ufile.ucloud.com.cn/3f8f9f008d9d34a9b4cdffd32a06a3d8.jpg"
+                },
+                {
+                    "pfid": 1000039,
+                    "count": 0,
+                    "nickname": "哇呀唔唔無武呃呃😂哇咔",
+                    "headimg": "http://playback-langlive.ufile.ucloud.com.cn/25f0e2243ac9f515ed3be2fb1854c8b7db8e04b195a088962179cf5937ae25dd"
+                },
+                {
+                    "pfid": 1000733,
+                    "count": 0,
+                    "nickname": "查房",
+                    "headimg": "http://playback-langlive.ufile.ucloud.cn/8422f67af167df7d2b2caa78ac0a4773c4eade4575b343b5a82b7a48c4bf1427"
+                },
+                {
+                    "pfid": 1000941,
+                    "count": 0,
+                    "nickname": "随意",
+                    "headimg": "http://playback-langlive.ufile.ucloud.cn/41395b6c4851bbc8d2ac49b643ea1420"
+                }
+            ],
+            "ticket_count": "5",
+            "end_time": 100600
+        },
+        "forecast": {
+            "vote_result": {
+                "1": {
+                    "start_time": 1499943600,
+                    "forecast_end_time": 1499944200,
+                    "innings_end_time": 1499947200,
+                    "ticket_count_justice": "1",
+                    "ticket_count_evil": 0,
+                    "used_ticket": "1",
+                    "win": 0
+                },
+                "2": {
+                    "start_time": 1499947200,
+                    "forecast_end_time": 1499947800,
+                    "innings_end_time": 1499950800,
+                    "ticket_count_justice": "1",
+                    "ticket_count_evil": 0,
+                    "used_ticket": "1",
+                    "win": 0
+                },
+                "3": {
+                    "start_time": 1499950800,
+                    "forecast_end_time": 1499951400,
+                    "innings_end_time": 1499954400,
+                    "ticket_count_justice": 0,
+                    "ticket_count_evil": 0,
+                    "used_ticket": 0,
+                    "win": 0
+                }
+            },
+            "stage": 2
+        }
+    }
+}

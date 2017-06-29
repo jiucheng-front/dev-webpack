@@ -21,7 +21,7 @@ header,
   display: block;
   width: 2rem;
   height: .67rem;
-  background-image: url(../images/top_followbg.png);
+  background-image: url(/html/draculaDinner/images/top_followbg.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   position: absolute;
@@ -38,7 +38,7 @@ header,
 	height: .95rem;
 	right: 0.266667rem;
 	bottom: 0.666667rem;
-	background-image: url(../images/top.png);
+	background-image: url(/html/draculaDinner/images/top.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
 	z-index: 20;
@@ -82,11 +82,11 @@ header,
   top: .11rem;
 }
 .nav-list li:nth-child(1){
-  background-image: url(../images/tab_leftbg_01.png);
+  background-image: url(/html/draculaDinner/images/tab_leftbg_01.png);
   left: 0;
 }
 .nav-list li:nth-child(2){
-  background-image: url(../images/tab_rightbg_01.png);
+  background-image: url(/html/draculaDinner/images/tab_rightbg_01.png);
   left: 3.7rem;
 }
 .nav-list li.selected{
@@ -94,10 +94,10 @@ header,
   top: 0;
 }
 .nav-list li:nth-child(1).selected{
-  background-image: url(../images/tab_leftbg_02.png);
+  background-image: url(/html/draculaDinner/images/tab_leftbg_02.png);
 }
 .nav-list li:nth-child(2).selected{
-  background-image: url(../images/tab_rightbg_02.png);
+  background-image: url(/html/draculaDinner/images/tab_rightbg_02.png);
 }
 /*// .content-item*/
 .content-item{
@@ -283,22 +283,22 @@ header,
 	margin-right: .8rem;
 }
 .icon-one-before{
-	background-image: url(../images/small_icon_a01.png);
+	background-image: url(/html/draculaDinner/images/small_icon_a01.png);
 }
 .icon-one-start{
-  background-image: url(../images/small_icon_a02.png);
+  background-image: url(/html/draculaDinner/images/small_icon_a02.png);
 }
 .icon-two-before{
-	background-image: url(../images/small_icon_b01.png);
+	background-image: url(/html/draculaDinner/images/small_icon_b01.png);
 }
 .icon-two-start{
-  background-image: url(../images/small_icon_b02.png);
+  background-image: url(/html/draculaDinner/images/small_icon_b02.png);
 }
 .icon-three-before{
-	background-image: url(../images/small_icon_c01.png);
+	background-image: url(/html/draculaDinner/images/small_icon_c01.png);
 }
 .icon-three-start{
-	background-image: url(../images/small_icon_c02.png);
+	background-image: url(/html/draculaDinner/images/small_icon_c02.png);
 }
 /*// prophet-lists*/
 .prophet-lists{
@@ -326,7 +326,7 @@ header,
   border-radius: 50%;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  background-image: url(../images/is_winbg.png);
+  background-image: url(/html/draculaDinner/images/is_winbg.png);
   position: absolute;
   top: 1.67rem;
   display: none;

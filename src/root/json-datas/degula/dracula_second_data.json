@@ -63,36 +63,36 @@
                     "headimg": "http://playback-langlive.ufile.ucloud.cn/41395b6c4851bbc8d2ac49b643ea1420"
                 }
             ],
-            "ticket_count": "5",
-            "end_time": 100600
+            "ticket_count": "3",
+            "end_time": 325
         },
         "forecast": {
             "vote_result": {
                 "1": {
                     "start_time": 1499943600,
-                    "forecast_end_time": 1499944200,
+                    "forecast_end_time": 13,
                     "innings_end_time": 1499947200,
                     "ticket_count_justice": "1",
                     "ticket_count_evil": 0,
                     "used_ticket": "1",
-                    "win": 0
+                    "win": 1
                 },
                 "2": {
                     "start_time": 1499947200,
-                    "forecast_end_time": 1499947800,
+                    "forecast_end_time": 19,
                     "innings_end_time": 1499950800,
                     "ticket_count_justice": "1",
                     "ticket_count_evil": 0,
-                    "used_ticket": "1",
-                    "win": 0
+                    "used_ticket": "0",
+                    "win": -1
                 },
                 "3": {
                     "start_time": 1499950800,
-                    "forecast_end_time": 1499951400,
+                    "forecast_end_time": 19,
                     "innings_end_time": 1499954400,
                     "ticket_count_justice": 0,
                     "ticket_count_evil": 0,
-                    "used_ticket": 0,
+                    "used_ticket": "0",
                     "win": 0
                 }
             },

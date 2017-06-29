@@ -1,5 +1,3 @@
-console.log("测试");
-
 
 !function(){
   //
@@ -118,7 +116,6 @@ console.log("测试");
           allStars(starsObject);
           // 3、预言家
           var forecast=data.data.forecast;
-
           resetData(forecast);
         }
       },function(error){
@@ -129,23 +126,25 @@ console.log("测试");
   postData();
   // 3.3 预言家
   function resetData(object){
-    // 6个的DOM
+    // 6个票数
     var ticketsDom=document.getElementsByClassName("same-camp-ticket");
     var justiceTicket=document.getElementsByClassName("justice-ticket");
     var evilTicket=document.getElementsByClassName("evil-ticket");
-    var defaultBrn=document.getElementsByClassName("default-btn");
-    var hadWin=document.getElementsByClassName("had-win");
-    var iconRound=document.getElementsByClassName("icon-round");
-    var iconClass=[["icon-one-before","icon-one-start"],["icon-two-before","icon-two-start"],["icon-three-before","icon-three-start"]];
+    // 正义按钮邪恶按钮
+    var justiceBtn=document.getElementsByClassName("justice-btn");
+    var evilBtn=document.getElementsByClassName("evil-btn");
+    // 胜负状态
+    var justiceWin=document.getElementsByClassName("justice-win");
+    var evilWin=document.getElementsByClassName("evil-win");
     // console.log(object);
     var arr=[];
     var lists=object.vote_result;
-    var stage=object.stage;
     for(var key in lists){
       arr.push(lists[key]);
     }
-    var hash=[[0,1],[2,3],[4,5]];
     console.log(arr);
+    var hash=[[0,1],[2,3],[4,5]];
+    // 遍历
     for(var j=0;j<arr.length;j++){
       var roundLiist=arr[j];
       // 正义票数
@@ -153,19 +152,136 @@ console.log("测试");
       var evil_ticket=roundLiist.ticket_count_evil;
       justiceTicket[j].innerHTML=justice_ticket+"票";
       evilTicket[j].innerHTML=evil_ticket+"票";
+      // 胜负状态
+      var win_status=roundLiist.win;
+      if(win_status==1){
+        justiceWin[j].className="justice-win"+" show";
+      }else if(win_status==-1){
+        evilWin[j].className="evil-win"+" show";
+      }
+      // 投给了谁 prophet-btn
+      var who_get=roundLiist.used_ticket;
+      if(who_get==1){
+        justiceBtn[j].className="default-btn justice-btn"+" have-voted";
+        document.getElementsByClassName("have-voted")[j].innerHTML="已投";
+      }else if(who_get==-1){
+        evilBtn[j].className="default-btn evil-btn"+" have-voted";
+        document.getElementsByClassName("have-voted")[j].innerHTML="已投";
+      }
     }
-  }
-
-  function prophetVote(){
-    var prophetBtns=document.getElementsByClassName("prophet-btn");
-    for(var k=0;k<prophetBtns.length;k++){
-      prophetBtns[k].onclick=function(){
-        var place=this.getAttribute("data-vote");
-        console.log(place);
+    // 第几轮
+    var iconRound=document.getElementsByClassName("icon-round");
+    var iconClass=["icon-one-start","icon-two-start","icon-three-start"];
+    var stage=object.stage;
+    var roundCount=document.getElementsByClassName("same-is-start");
+    var defaultBtn=document.getElementsByClassName("default-btn");
+    // stage==1&&(iconRound[0].className="icon-round "+iconClass[0]);
+    // stage==2&&(iconRound[1].className="icon-round "+iconClass[1]);
+    // stage==3&&(iconRound[2].className="icon-round "+iconClass[2]);
+    // 第一轮投票
+    if(stage==1){
+      iconRound[0].className="icon-round "+iconClass[0];
+      var oneTime=arr[0].forecast_end_time;
+      roundCount[1].innerHTML="投票未開始";
+      roundCount[2].innerHTML="投票未開始";
+      if(oneTime!=0){
+        sameCountDown("oneCountDown",oneTime,stage);
+        defaultBtn[0].className="default-btn justice-btn"+" prophet-btn";
+        defaultBtn[1].className="default-btn evil-btn"+" prophet-btn";
+        var nowBtns=document.getElementsByClassName("prophet-btn");
+        prophetVote(nowBtns,stage);
+      }else{
+        roundCount[0].innerHTML="投票已經結束";
+      }
+      // 第二轮投票
+    }else if(stage==2){
+      iconRound[1].className="icon-round "+iconClass[1];
+      var twoTime=arr[1].forecast_end_time;
+      roundCount[0].innerHTML="投票已經結束";
+      roundCount[2].innerHTML="投票未開始";
+      // 不是0可以投票
+      if(twoTime!=0){
+        sameCountDown("twoCountDown",twoTime,stage);
+        defaultBtn[2].className="default-btn justice-btn"+" prophet-btn";
+        defaultBtn[3].className="default-btn evil-btn"+" prophet-btn";
+        var nowBtns=document.getElementsByClassName("prophet-btn");
+        prophetVote(nowBtns,stage);
+      }else{
+        roundCount[1].innerHTML="投票已經結束";
+      }
+      // console.log(defaultBtn.length);
+      // 第三轮投票
+    }else if(stage==3){
+      iconRound[2].className="icon-round "+iconClass[2];
+      var threeTime=arr[2].forecast_end_time;
+      roundCount[0].innerHTML="投票已經結束";
+      roundCount[1].innerHTML="投票已經結束";
+      // 不是0可以投票
+      if(threeTime!=0){
+        sameCountDown("threeCountDown",threeTime,stage);
+        defaultBtn[4].className="default-btn justice-btn"+" prophet-btn";
+        defaultBtn[5].className="default-btn evil-btn"+" prophet-btn";
+        var nowBtns=document.getElementsByClassName("prophet-btn");
+        prophetVote(nowBtns,stage);
+      }else{
+        roundCount[2].innerHTML="投票已經結束";
       }
     }
   }
-  prophetVote();
+  // 预言家倒计时
+  function  sameCountDown(id,count,round){
+    var index=round-1;
+    var btnParent=document.getElementsByClassName("prophet-lists")[index];
+    var canBtns=btnParent.getElementsByClassName("default-btn");
+    var elemDom=getEleId(id);
+    var timer=null;
+    var total=count;
+    var minutes=0;
+    var second=0;
+    var start=true;
+    minutes=Math.floor(total/60%60);
+    minutes<10&&(minutes='0'+minutes);
+    second=Math.floor(total%60);
+    function timeCount(){
+      second--;
+      second<10&&(second='0'+second);
+      if(second.length>=3){
+        second=59;
+        minutes="0"+(Number(minutes)-1);
+      }
+      if(minutes.length>=3){
+        minutes='00';
+        second='00';
+        start=false;
+        clearInterval(timer);
+      }
+      if(start){
+        elemDom.innerHTML="投票倒计时："+minutes+'：'+second;
+      }else{
+        elemDom.innerHTML="投票已經結束";
+        canBtns[0].className="default-btn justice-btn";
+        canBtns[1].className="default-btn evil-btn";
+      }
+    }
+    timer=setInterval(timeCount,1000);
+  }
+  // 预言家投票
+  function prophetVote(nowBtns,round){
+    for(var k=0;k<nowBtns.length;k++){
+      nowBtns[k].addEventListener("click",function(event){
+        event.preventDefault();
+        event.stopPropagation();
+        if(hasClass(this,"prophet-btn")){
+          var place=this.getAttribute("data-vote");
+          var roundStage=round;
+          // 投票需要三個參數：谁投的 pfid,当前第几轮 stage,投给了谁 place
+          console.log(place,round);
+          console.log(this.className);
+        }
+      });
+    }
+  }
+
 
 
   // 1、0顶部是否追踪过
@@ -232,9 +348,9 @@ console.log("测试");
       str_html+='<p>'+nick_name+'</p>';
       str_html+='<p>獲得星星：'+star_count+'</p>';
       if(remainCount==0){
-        str_html+='<span class="cant-vote">投票</span>';
+        str_html+='<span data-anchorpfid="'+user_pfid+'">投票</span>';
       }else{
-        str_html+='<span class="vote-btn" data-pfid="'+user_pfid+'">投票</span>';
+        str_html+='<span class="vote-btn" data-anchorpfid="'+user_pfid+'">投票</span>';
       }
       str_html+='</li>';
     }
@@ -249,9 +365,9 @@ console.log("测试");
     var t=time;
     var m=0;
     var s=0;
-    m=Math.floor(t/1000/60%60);
+    m=Math.floor(t/60%60);
     m<10&&(m='0'+m);
-    s=Math.floor(t/1000%60);
+    s=Math.floor(t%60);
     function countDown(){
       s--;
       s<10&&(s='0'+s);
@@ -277,8 +393,8 @@ console.log("测试");
     // 用戶列表投票
     var voteBtns=document.getElementsByClassName("vote-btn");
     for(var i=0;i<voteBtns.length;i++){
-      voteBtns[i].addEventListener("click",function(){
-        var pfid=this.getAttribute("data-pfid");
+      voteBtns[i].addEventListener("click",function(event){
+        var anchorpfid=this.getAttribute("data-anchorpfid");
         // 需要重新請求數據
         alert(pfid);
       });
@@ -297,6 +413,7 @@ console.log("测试");
         for (var j = 0; j < items.length; j++) {
           items[j].className="content-item";
           btns[j].className="js-nav-btn";
+          // console.log(this);
         }
         btns[this.index].className="js-nav-btn selected";
         items[this.index].className="content-item show";

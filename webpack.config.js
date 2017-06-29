@@ -122,17 +122,17 @@ module.exports = {
         }),
         //7 代码优化：合并以及压缩代码
         // 开发环境暂时不需要
-        new webpack.optimize.UglifyJsPlugin({
-            beautify: false,
-            //7.1输出不显示警告
-            compress: {
-                warnings: false
-            },
-            //7.2 输出去掉注释
-            output: {
-                comments: false
-            }
-        }),
+        // new webpack.optimize.UglifyJsPlugin({
+        //     beautify: false,
+        //     //7.1输出不显示警告
+        //     compress: {
+        //         warnings: false
+        //     },
+        //     //7.2 输出去掉注释
+        //     output: {
+        //         comments: false
+        //     }
+        // }),
         //6.1 css抽离
         new ExtractTextPlugin({
             filename: 'app_[hash].css',

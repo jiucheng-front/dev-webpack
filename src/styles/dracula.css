@@ -187,9 +187,12 @@ header,
 	margin: 0 auto;
 	line-height: .51rem;
 	text-align: center;
-	background-color: #7585DE;
+	background-color: #888;
 	border-radius: .3rem;
 	margin-top: .1rem;
+}
+.user-lists li span.vote-btn{
+	background-color: #7585de;
 }
 /*// user-footer*/
 .user-middle-bg{
@@ -449,9 +452,4 @@ header,
   color: #5C5B74;
   text-align: justify;
   line-height: .46rem;
-}
-/**/
-.cant-vote{
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
 }

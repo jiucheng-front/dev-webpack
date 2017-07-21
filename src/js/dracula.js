@@ -97,6 +97,34 @@
   // 	console.log(error);
   // });
 
+
+
+  // 测试异步获取数据
+  function getNewDate(){
+      var newOption={
+          ajaxType:"POST",
+          urlStr:"api/html/company/admin/anchor/data/month",
+          ajaxData:{
+            "page":1,								
+            "month":"201707",
+            "pfid":"",
+            "company_id":"",
+            "team_id":"",
+            "len":""
+          }
+      };
+      nativeAjax(newOption,function(data){
+        console.log(data);
+      },function(error){
+        console.log(error);
+      });
+  }
+  getNewDate();//提示 未登錄，proxy測試跨域
+
+
+
+
+
   //0、请求数据
   function postData(){
     var getOption={

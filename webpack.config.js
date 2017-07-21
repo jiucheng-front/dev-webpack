@@ -41,7 +41,17 @@ module.exports = {
         inline: true,
         port: 8000,
         // 指定本地电脑的IP作为host,方便同一个局域网手机查看效果
-        host: "172.16.9.142"
+        host: "172.16.9.142",
+        proxy: {
+            "/api":{
+                // 最后这个是要换的
+                target:"http://zengsimin-dev.langlive.com:80",
+                changeOrigin:true,
+                pathRewrite:{
+                "^/api":""
+                }
+            }
+        }
     },
     //4 引入loaders
     module: {

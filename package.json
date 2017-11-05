@@ -1,27 +1,31 @@
 {
-  "name": "webpack-config",
+  "name": "local-dev",
   "version": "1.0.0",
-  "description": "小活動",
+  "description": "just dev env",
   "main": "index.js",
   "scripts": {
-    "clean": "rimraf build",
-    "start": "webpack",
-    "dev": "webpack-dev-server --open"
+    "clean": "rimraf dist",
+    "dev": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:wjf444128852/langlive-webpack.git"
+    "url": "git@github.com:wjf444128852/Langlive-WebpackDev.git"
   },
   "author": "nine",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.comwjf444128852/issues"
+    "url": "https://github.com/wjf444128852/Langlive-WebpackDev/issues"
   },
-  "homepage": "https://github.com/wjf444128852#readme",
+  "homepage": "https://github.com/wjf444128852/Langlive-WebpackDev#readme",
+  "dependencies": {
+    "jquery": "^3.2.1"
+  },
   "devDependencies": {
-    "babel-core": "^6.24.0",
-    "babel-loader": "^6.4.1",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
+    "clean-webpack-plugin": "^0.1.16",
     "css-loader": "^0.27.3",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.10.1",
@@ -29,14 +33,13 @@
     "less": "^2.7.2",
     "less-loader": "^4.0.4",
     "node-sass": "^4.5.0",
+    "optimize-css-assets-webpack-plugin": "^3.2.0",
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.14.1",
+    "uglifyjs-webpack-plugin": "^0.4.6",
     "url-loader": "^0.5.8",
-    "webpack": "^2.2.1"
-  },
-  "dependencies": {
-    "handlebars": "^4.0.8",
-    "jquery": "^3.2.1"
+    "webpack": "^3.5.6",
+    "webpack-merge": "^4.1.0"
   }
 }

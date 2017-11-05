@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rimraf build",
     "start": "webpack",
-    "server": "webpack-dev-server --open"
+    "dev": "webpack-dev-server --open"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
   "devDependencies": {
     "babel-core": "^6.24.0",
     "babel-loader": "^6.4.1",
-    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-env": "^1.6.1",
     "css-loader": "^0.27.3",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.10.1",

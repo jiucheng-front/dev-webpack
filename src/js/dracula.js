@@ -119,7 +119,8 @@
         console.log(error);
       });
   }
-  getNewDate();//提示 未登錄，proxy測試跨域
+  //提示 未登錄，proxy測試跨域
+  // getNewDate();
 
 
 

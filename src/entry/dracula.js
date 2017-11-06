@@ -103,7 +103,7 @@
   function getNewDate(){
       var newOption={
           ajaxType:"POST",
-          urlStr:"api/html/company/admin/anchor/data/month",
+          urlStr:"api/company/admin/anchor/data/month",
           ajaxData:{
             "page":1,								
             "month":"201707",
@@ -120,7 +120,7 @@
       });
   }
   //提示 未登錄，proxy測試跨域
-  // getNewDate();
+  getNewDate();
 
 
 

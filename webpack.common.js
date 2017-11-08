@@ -75,7 +75,7 @@ module.exports = {
             },
             //3 编译js或者es6
             {
-                test: '/\.js$/',
+                test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader"
@@ -91,6 +91,13 @@ module.exports = {
                         // fonts/打包到dist下的fonts文件夹
                         name: 'fonts/[name].[hash:7].[ext]'
                     }
+                }
+            },
+            // 处理.pug HTML片段
+            {
+                test:/\.pug$/,
+                use:{
+                    loader:"pug-loader"
                 }
             }
 
@@ -109,6 +116,7 @@ module.exports = {
             title: 'App',
             filename: 'index.html',
             template: CONFIG.dev.indexFile
+            // template: "./src/pages/index.pug"
         }),
     ]
 };

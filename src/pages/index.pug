@@ -1,0 +1,29 @@
+extends layout
+
+block mainContent
+
+    .view-index
+
+        .nav 
+            .nav-wrapper
+                span 我是导航
+
+
+        .main
+            .section.section-video
+                .video
+                    h2 我是视频123~
+
+                #dm-main
+                    #dm-screen
+
+            .section.section-message
+
+                .message-box
+                    ul.message-content
+
+                a.btn.btn-show-latest-message(href="javascript:" data-count=0) 有0条最新消息
+
+                form.form-user-message(onsubmit="return false")
+                    input(type="text" placeholder="输入")
+                    a.btn.btn-submit(href="javascript:") 提交

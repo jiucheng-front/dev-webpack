@@ -11,3 +11,8 @@ require("../styles/dracula.css");
 // 逻辑
 require("./dracula.js");
 
+var html = require("../md/README.md");
+var container = document.getElementById("md");
+
+container.innerHTML = html;
+

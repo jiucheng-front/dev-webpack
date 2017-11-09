@@ -12,6 +12,13 @@ const CONFIG = require('./config/config');
 
 // console.log(__dirname, CONFIG.build.outPutProjectPath);
 
+
+// markdown conver to html
+var marked = require("marked");
+var renderer = new marked.Renderer();
+
+
+
 module.exports = {
     entry:{
         app:'./src/entry/entry.js',
@@ -92,6 +99,20 @@ module.exports = {
                         name: 'fonts/[name].[hash:7].[ext]'
                     }
                 }
+            },
+            {
+                test: /\.md$/,
+                use: [
+                    {
+                        loader: "html-loader"
+                    },
+                    {
+                        loader: require.resolve("./md/md.js"),
+                        options: {
+                            renderer
+                        }
+                    }
+                ]
             },
             // 处理.pug HTML片段
             {

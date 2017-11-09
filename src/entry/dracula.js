@@ -492,4 +492,14 @@
   // var $=require("jquery");
   // console.log($("#following"));
 
+
+  // 測試PUG
+  // var template = require("pug-loader!./file.pug");
+  // => returns file.pug content as template function
+
+
+  // or, if you've bound .pug to pug-loader
+  // var template = require("../pages/index.pug");
+  // console.log(template);
+
 }();

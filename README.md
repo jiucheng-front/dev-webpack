@@ -3,10 +3,11 @@
 + 如何使用：
 	+ 1、<code>clone到本地</code>
 	+ 2、<code>npm install</code>
-	+ 3、<code>npm run server</code> 即可查看效果
-+ <code>npm run server</code>：自动打开浏览器并预览(地址是自己配置的IP方便手机查看)
-+ <code>npm run start </code>：项目打包(感觉以及完善了即可)，自动创建build文件夹
-+ <code>npm run clean </code>：删除build文件夹
+	+ 3、<code>npm run dev</code> 即可查看效果
++ <code>npm run dev</code>：自动打开浏览器并预览(地址是自己配置的IP方便手机查看)
++ <code>npm run build </code>：项目打包(感觉以及完善了即可)，自动创建build文件夹
++ 打包后的文件夹可以根据config/config.js自定义(方便自己上线的目录对应)
+
 
 ### 二、已经完成的配置
 + 1、webpack-dev-server 热更新
@@ -17,7 +18,8 @@
 + 6、压缩合并JS
 + 7、url-loader处理图片为base64，此配置使用时候图片必须是相对路径否则无效
 + 8、external外部配置文件(开发依赖)，例如：项目用到jQuery
-+ 9、vendor
++ 9、vendor(提取第三方JS库，如JQ)
++ 10、markDown文件自动转为html(类似github内的README.md默认样式)
 
 
 ### 三、文件目录介绍

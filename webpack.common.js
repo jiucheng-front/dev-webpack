@@ -13,7 +13,7 @@ const CONFIG = require('./config/config');
 // console.log(__dirname, CONFIG.build.outPutProjectPath);
 
 
-// markdown conver to html
+//5 markdown conver to html
 var marked = require("marked");
 var renderer = new marked.Renderer();
 
@@ -100,6 +100,7 @@ module.exports = {
                     }
                 }
             },
+            // 5、markDown文件转为html(需要markdown.css,和github.css)
             {
                 test: /\.md$/,
                 use: [
@@ -114,7 +115,7 @@ module.exports = {
                     }
                 ]
             },
-            // 处理.pug HTML片段
+            //6、 处理.pug HTML片段
             {
                 test:/\.pug$/,
                 use:{
@@ -137,7 +138,6 @@ module.exports = {
             title: 'App',
             filename: 'index.html',
             template: CONFIG.dev.indexFile
-            // template: "./src/pages/index.pug"
         }),
     ]
 };

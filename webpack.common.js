@@ -107,7 +107,7 @@ module.exports = {
                         loader: "html-loader"
                     },
                     {
-                        loader: require.resolve("./md/md.js"),
+                        loader: require.resolve("./src/md/md.js"),
                         options: {
                             renderer
                         }

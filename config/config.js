@@ -4,7 +4,7 @@ module.exports = {
     dev:{
         // 项目开发html
         indexFile:"degula.index.html",
-        port:4200,
+        port:8088,
         serverRoot:"/src",
         // 第三方库
         VENDOR:["jquery"]

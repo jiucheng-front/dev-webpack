@@ -68,6 +68,17 @@ module.exports = {
                     ]
                 })
             },
+            // 1.4 使用stylus-loader 编译 .stylus为CSS
+            {
+                test:/\.styl$/,
+                use:ExtractTextPlugin.extract({
+                    fallback:"style-loader",
+                    use:[
+                        "css-loader",
+                        "stylus-loader"
+                    ]
+                })
+            },
             //2 处理图片,图片路径需是相对路径才能看到效果
             {
                 test: /\.(jpg|png|gif|svg)$/,

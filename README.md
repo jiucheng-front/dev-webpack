@@ -11,7 +11,7 @@
 
 ### 二、已经完成的配置
 + 1、webpack-dev-server 热更新
-+ 2、编译LESS、SCSS、es6
++ 2、编译LESS、SCSS、Stylus、es6
 + 3、自动追加打包后文件版本号
 + 4、html自定义模板
 + 5、抽离css压缩CSS

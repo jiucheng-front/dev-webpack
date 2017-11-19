@@ -6,8 +6,8 @@ module.exports = {
         indexFile:"degula.index.html",
         port:8088,
         serverRoot:"/src",
-        // 第三方库
-        VENDOR:["jquery"]
+        // 第三方库JQ如果使用再加在 DENDOR中
+        VENDOR:["lib-flexible"]
     },
     build:{
         // 打包到文件夹下

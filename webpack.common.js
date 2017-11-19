@@ -6,9 +6,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CONFIG = require('./config/config');
 
 // 4、提取第三方JS庫
-// const VENDOR=[
-//     "jQuery"
-// ];
+const VENDOR=[
+    "lib-flexible"
+];
 
 // console.log(__dirname, CONFIG.build.outPutProjectPath);
 

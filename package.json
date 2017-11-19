@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/wjf444128852/Langlive-WebpackDev#readme",
   "dependencies": {
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "lib-flexible": "^0.3.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

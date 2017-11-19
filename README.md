@@ -18,7 +18,7 @@
 + 6、压缩合并JS
 + 7、url-loader处理图片为base64，此配置使用时候图片必须是相对路径否则无效
 + 8、external外部配置文件(开发依赖)，例如：项目用到jQuery
-+ 9、vendor(提取第三方JS库，如JQ)
++ 9、vendor(提取第三方JS库，如JQ、手淘lib-flexible)
 + 10、markDown文件自动转为html(类似github内的README.md默认样式)
 
 

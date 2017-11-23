@@ -56,7 +56,7 @@ var arr=[
 ];
 
 var str = template({data:arr});
-console.log(str);
+// console.log(str);
 pugBox.innerHTML = str;
 
 //

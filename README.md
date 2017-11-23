@@ -6,7 +6,6 @@
 	+ 3、<code>npm run dev</code> 即可查看效果
 + <code>npm run dev</code>：自动打开浏览器并预览(地址是自己配置的IP方便手机查看)
 + <code>npm run build </code>：项目打包(感觉以及完善了即可)，自动创建build文件夹
-+ 打包后的文件夹可以根据config/config.js自定义(方便自己上线的目录对应)
 
 
 ### 二、已经完成的配置
@@ -20,6 +19,7 @@
 + 8、external外部配置文件(开发依赖)，例如：项目用到jQuery
 + 9、vendor(提取第三方JS库，如JQ、手淘lib-flexible)
 + 10、markDown文件自动转为html(类似github内的README.md默认样式)
++ 11、添加pug、和pug-loader处理html组件化
 
 
 ### 三、文件目录介绍
@@ -33,7 +33,7 @@
 + .gitignore：github提交的时候想要忽略提交的配置
 + package.json：项目所需要的依赖包以及配置说明。
 + tsconfig.json：编译TypeScript的配置参数。编译后让多数浏览器都支持的javascript
-+ .html和.ejs都是HTML的模板样式，最终会自动添加到指定的活动内
++ .html模板样式，最终会自动添加到指定的活动内
 
 ### 三、其他
 + 如：德古拉(degula_old.js)：[预览](https://wjf444128852.github.io/html/degulaOne/)

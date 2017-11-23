@@ -30,3 +30,26 @@ var container = document.getElementById("md")
 
 container.innerHTML = html;
 
+// PUG 渲染
+var template = require("./demo.pug");
+var pugBox = document.getElementById("pug");
+
+var arr=[
+    {
+        name:"张一",
+        tel:1358888888
+    },
+    {
+        name:"张二",
+        tel:1358888888
+    },
+    {
+        name:"张三",
+        tel:1358888888
+    }
+];
+
+var str = template({data:arr});
+console.log(str);
+pugBox.innerHTML = str;
+

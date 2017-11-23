@@ -1,0 +1,10 @@
+ul.rank-box
+    each item in data
+
+        li
+            div.headimg
+                img(src=item.src)
+
+            .user-info
+                p.nick-name=item.name
+                p.counts=item.diamond

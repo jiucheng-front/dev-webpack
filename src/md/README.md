@@ -1,4 +1,4 @@
-### 关于webpack配置渲染markdown文件为html
+### webpack配置渲染markdown文件为html
 #### 一、所需依赖
 + 1、html-loader
 + 2、loader-utils

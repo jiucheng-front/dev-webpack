@@ -25,7 +25,9 @@ Test.backTop("backTop")
  * 四、渲染markdown
  * 
  */
-require("./markdown")
+// require("./markdown")
+import Markdown from "./markdown"
+Markdown.init();
 
 
 /**

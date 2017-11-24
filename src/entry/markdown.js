@@ -1,16 +1,25 @@
 "use strict";
-
-// 二、markdown、less、stylus
-// 渲染markdown文件为html
+/**
+ * 二、markdown、less、stylus
+ * 
+ */
 require("../md/markdown.css")
 require("../md/github.css")
-// 1119 测试less
+// 1119 test less
 require("../styles/less_mixin.less")
-// 测试stylus
+// test stylus
 require("../styles/test.styl")
 
-//  渲染markdown为html
-var html = require("../md/README.md")
-var container = document.getElementById("md")
+const Markdown = {
+    init(){
+        console.log("啊啊啊");
+        this.container = document.getElementById("md");
+        this.html = require("../md/README.md");
+        this.renderHtml(this.html);
+    },
+    renderHtml(){
+        this.container.innerHTML = this.html;
+    }
+}
 
-container.innerHTML = html;
+module.exports = Markdown

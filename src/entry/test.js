@@ -1,3 +1,5 @@
+require("../styles/test.styl")
+
 class Test{
     constructor(){
 

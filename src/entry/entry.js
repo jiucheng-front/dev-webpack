@@ -16,8 +16,9 @@ require("../styles/base.css")
  * 三、引入逻辑
  * 
  */
+
 import Test from "./test"
-console.log(Test);
+Test.backTop("backTop")
 
 
 /**

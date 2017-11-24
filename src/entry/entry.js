@@ -10,13 +10,17 @@ import 'lib-flexible'
  * 
  */
 require("../styles/base.css")
-
+require("../md/markdown.css")
+require("../md/github.css")
+// 1119 test less
+require("../styles/less_mixin.less")
+// test stylus
+require("../styles/test.styl")
 
 /**
  * 三、引入逻辑
  * 
  */
-
 import Test from "./test"
 Test.backTop("backTop")
 

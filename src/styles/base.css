@@ -78,3 +78,7 @@ input[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
 
+.container{
+    max-width: 10rem;
+    margin: 0 auto
+}

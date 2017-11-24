@@ -3,7 +3,7 @@
 module.exports = {
     dev:{
         // 项目开发html
-        indexFile:"degula.index.html",
+        indexFile:"template.index.html",
         port:4200,
         serverRoot:"/src",
         // 第三方库JQ如果使用再加在 DENDOR中

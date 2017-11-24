@@ -1,0 +1,10 @@
+ul.doc-box
+    each item,index in data
+        li.item-box
+            h3= item.name
+            p.en-doc
+                span 英文：
+                a(href=item.Englink target="_blank")=item.Englink
+            p.ch-doc
+                span 中文：
+                a(href=item.Chlink target="_blank")=item.Chlink

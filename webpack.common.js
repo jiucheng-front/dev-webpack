@@ -132,13 +132,6 @@ module.exports = {
                 use:{
                     loader:"pug-loader"
                 }
-            },
-            //7、处理handlebars-loader
-            {
-                test: /\.handlebars$/,
-                use:{
-                    loader:"handlebars-loader"
-                }
             }
 
         ]

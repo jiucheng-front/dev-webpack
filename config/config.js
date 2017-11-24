@@ -4,7 +4,7 @@ module.exports = {
     dev:{
         // 项目开发html
         indexFile:"degula.index.html",
-        port:8088,
+        port:4200,
         serverRoot:"/src",
         // 第三方库JQ如果使用再加在 DENDOR中
         VENDOR:["lib-flexible"]

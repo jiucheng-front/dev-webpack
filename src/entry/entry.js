@@ -1,80 +1,34 @@
-// 一、引入flexible
-// require("../plugins/flexible");
-// 11-19 使用 lib-flexible npm包代替flexible.js,需要配置vendor 提取打包
+/**
+ * 一、引入flexible(1,2方式)
+ * 1、require("../plugins/flexible");
+ */
+// 2、11-19 使用 lib-flexible npm包代替flexible.js,需要配置vendor 提取打包
 import 'lib-flexible'
 
-
+/**
+ * 二、引入CSS
+ * 
+ */
 require("../styles/base.css")
 
-// 樣式
-require("../styles/dracula.css")
 
-
-
-// 逻辑(2种用法都可以)
-// require("./dracula.js");
-import "./dracula.js"
-
-// 二、markdown、less、stylus
-// 渲染markdown文件为html
-require("../md/markdown.css")
-require("../md/github.css")
-// 1119 测试less
-require("../styles/less_mixin.less")
-// 测试stylus
-require("../styles/test.styl")
-
-//  渲染markdown为html
-var html = require("../md/README.md")
-var container = document.getElementById("md")
-
-container.innerHTML = html;
-
-// PUG 渲染
 /**
- * DOV
- * https://github.com/pugjs/pug-loader
- * https://pugjs.org/api/reference.html
+ * 三、引入逻辑
  * 
- * * */
-var template = require("./demo.pug");
-var pugBox = document.getElementById("pug");
+ */
+import Test from "./test"
+console.log(Test);
 
-var arr=[
-    {
-        name:"张一",
-        tel:1358888888
-    },
-    {
-        name:"张二",
-        tel:1358888888
-    },
-    {
-        name:"张三",
-        tel:1358888888
-    }
-];
 
-var str = template({data:arr});
-// console.log(str);
-pugBox.innerHTML = str;
+/**
+ * 四、渲染markdown
+ * 
+ */
+require("./markdown")
 
-//
-var rank = require("../pug/rank.pug");
-var rankBox = document.getElementById("rankBox");
 
-var rankLists=[
-    {
-        src:"http://a.img.shouyintv.cn/jBfK301-normal",
-        name:"你是风儿我傻傻",
-        diamond:123
-    },
-    {
-        src:"http://a.img.shouyintv.cn/QDjD301-normal",
-        name:"个覅感觉对方考虑",
-        diamond:456654
-    }
-];
-
-var rankStr = rank({ data:rankLists });
-rankBox.innerHTML = rankStr;
+/**
+ * 五、使用pug 组件
+ * 
+ */
+require("./loadpug")

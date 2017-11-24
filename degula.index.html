@@ -2,214 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>德古拉的晚餐</title>
+  <title>Dev template</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
   <meta name="description" content="" />
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
   <meta name="format-detection" content="telephone=no" />
   <meta http-equiv="cleartype" content="on" />
-  <script>
-      var token = '<?=$token;?>';
-      var pfid = '<?=$pfid;?>';
-      var share_url_head = '<?=$share_url_head;?>';
-      var anchor_id='<?=$anchor_id;?>';
-  </script>
 </head>
 <body>
     <!-- 返回顶部 -->
     <div id="backTop" class="backTop"></div>
-    <!-- 正文 -->
-    <div id="container" class="">
-       <header>
-         <span id="following"></span>
-         <div id="ruleBtn" class="rule-btn"></div>
-         <img src="/html/web/draculaDinner/images/degula_header.jpg" alt="" class="block">
-       </header>
-       <div class="nav">
-         <ul class="nav-list">
-           <li class="js-nav-btn selected">人氣星星換金幣</li>
-           <li class="js-nav-btn">我是預言家</li>
-         </ul>
-       </div>
-       <div id="content" class="content">
-         <!-- 用户 -->
-         <div class="content-item show">
-           <div class="user-bg">
-             <ul class="user-title">
-               <li>剩餘生氣星星：<span id="remainStars">5</span></li>
-               <li>獲得下顆星星還剩：<span id="ramainTimes">00：00</span></li>
-             </ul>
-             <ul id="userLists" class="user-lists">
-
-             </ul>
-           </div>
-           <!--  -->
-           <div class="user-middle-bg"></div>
-           <!-- 說明 -->
-           <div class="user-description-bg">
-             <div class="user-doc">
-               <h3>票選人氣主播</h3>
-               <p>節目開播期間每五分鐘（需停留在直播房間），浪友們即可以獲得一個人氣星星，每一局主持人宣佈獲勝陣營同時，獲得最多人氣星星的主播可以獲得一枚勝利金幣，每位主播最多額外獲得一個勝利金幣，已經獲得的主播如果依然是最高人氣則權利遞交給第二名人氣主播以此類推，趕緊利用人氣星星應援你最喜歡的主播，幫主播開啟神秘寶箱獲取100萬</p>
-             </div>
-           </div>
-         </div>
-         <!-- 预言家 -->
-         <div class="content-item">
-           <ul id="prophet-content" class="prophet-content">
-             <!-- round 1 -->
-             <li>
-               <div class="same-title">
-                 <span class="icon-round icon-one-before"></span>
-                 <p id="oneCountDown" class="same-is-start">投票未開始</p>
-               </div>
-               <ul class="prophet-lists">
-                 <li>
-                   <div class="prophet-left">
-                     <div class="same-camp">
-                       <i class="justice-win"></i>
-                       <div class="same-camp-info">
-                         <h4>正義陣營</h4>
-                         <p class="justice-ticket same-camp-ticket">0票</p>
-                       </div>
-                     </div>
-                     <!-- 投票按鈕 -->
-                     <span class="justice-btn default-btn" data-vote="1">投票</span>
-                   </div>
-                   <div class="prophet-right">
-                     <div class="same-camp">
-                       <i class="evil-win"></i>
-                       <div class="same-camp-info">
-                         <h4>邪惡陣營</h4>
-                         <p class="evil-ticket same-camp-ticket">0票</p>
-                       </div>
-                     </div>
-                     <!-- 投票按鈕 -->
-                     <span class="evil-btn default-btn" data-vote="-1">投票</span>
-                   </div>
-                 </li>
-               </ul>
-             </li>
-             <!-- round 2 -->
-             <li>
-               <div class="same-title">
-                 <span class="icon-round icon-two-before"></span>
-                 <p id="twoCountDown" class="same-is-start">投票未開始</p>
-               </div>
-               <ul class="prophet-lists">
-                 <li>
-                   <div class="prophet-left">
-                     <div class="same-camp">
-                       <i class="justice-win"></i>
-                       <div class="same-camp-info">
-                         <h4>正義陣營</h4>
-                         <p class="justice-ticket same-camp-ticket">0票</p>
-                       </div>
-                     </div>
-                     <!-- 投票按鈕 -->
-                     <span class="justice-btn default-btn" data-vote="1">投票</span>
-                   </div>
-                   <div class="prophet-right">
-                     <div class="same-camp">
-                       <i class="evil-win"></i>
-                       <div class="same-camp-info">
-                         <h4>邪惡陣營</h4>
-                         <p class="evil-ticket same-camp-ticket">0票</p>
-                       </div>
-                     </div>
-                     <!-- 投票按鈕 -->
-                     <span class="evil-btn default-btn" data-vote="-1">投票</span>
-                   </div>
-                 </li>
-               </ul>
-             </li>
-             <!-- round 3 -->
-             <li>
-               <div class="same-title">
-                 <span class="icon-round icon-three-before"></span>
-                 <p id="threeCountDown" class="same-is-start">投票未開始</p>
-               </div>
-               <ul class="prophet-lists">
-                 <li>
-                   <div class="prophet-left">
-                     <div class="same-camp">
-                       <i class="justice-win"></i>
-                       <div class="same-camp-info">
-                         <h4>正義陣營</h4>
-                         <p class="justice-ticket same-camp-ticket">0票</p>
-                       </div>
-                     </div>
-                     <!-- 投票按鈕 -->
-                     <span class="justice-btn default-btn" data-vote="1">投票</span>
-                   </div>
-                   <div class="prophet-right">
-                     <div class="same-camp">
-                       <i class="evil-win"></i>
-                       <div class="same-camp-info">
-                         <h4>邪惡陣營</h4>
-                         <p class="evil-ticket same-camp-ticket">0票</p>
-                       </div>
-                     </div>
-                     <!-- 投票按鈕 -->
-                     <span class="evil-btn default-btn" data-vote="-1">投票</span>
-                   </div>
-                 </li>
-               </ul>
-             </li>
-           </ul>
-           <!--  -->
-           <div class="prophet-middle-bg"></div>
-           <!-- 說明 -->
-           <div class="prophet-info-bg">
-             <div class="user-doc">
-               <h3>正邪對決，你猜哪一邊</h3>
-               <p>活動期間浪友們可以進行預測正義或邪惡陣營獲勝，預測成功的浪友們將可以獲得100浪花的獎勵，每個帳號每一局僅限參加一次（第一局19:00-19:10 第二局20:00-20:10 第三局21:00-21:10）　※獎品發送方式請運營同仁提供建議方式.</p>
-             </div>
-           </div>
-         </div>
-       </div>
-       <!--底部-->
-       <div class="user-footer-bg"></div>
-    </div>
-    <!--游戏规则  -->
-    <div id="rule" class="">
-      <!-- 头图 -->
-      <div class="rule-header">
-        <img src="/html/web/draculaDinner/images/rule_bg_01.jpg" alt="" class="block">
-      </div>
-      <!-- 中间 -->
-      <div class="rule-title">
-        <h3>遊戲法則</h3>
-      </div>
-      <!-- 详细 -->
-      <div class="rule-detail">
-        <div class="rule-info">
-          <h3>遊戲玩法</h3>
-          <p>玩家分成兩大陣營:「正義」和「邪惡」，狼人在黑夜獵殺一人，而好人則在白天通過發言整理信息、盤出邏輯、並試圖找出狼人投票處決。</p>
-          <p>在遊戲的開始村民並不知道任何信息，而狼人互相認識。好人必須除掉所有狼人才能獲得勝利。狼人必須殺死場上所有好人才能獲勝，假設狼人與好人的票數相同，則壞人陣營同樣獲勝，獲勝者可以獲得一枚德古拉徽章。</p>
-          <h3>節目獎品</h3>
-          <p>獲得三枚德古拉徽章的選手將可以獲得開啟神秘寶箱的權利，假若選手擁有第四枚德古拉的徽章將可以進行獎勵加倍的遊戲，獲得最高100萬浪花的活動獎勵。</p>
-          <h3>獎品如下</h3>
-          <p>特獎：50萬浪花x1</p>
-          <p>二獎：30萬浪花x1</p>
-          <p>三獎：10萬浪花x1</p>
-          <p>普獎：5萬浪花x3</p>
-          <p>陷阱：隨機懲罰x1</p>
-          <p>《關於節目遊戲機制》</p>
-          <h3>角色說明</h3>
-          <p>狼人有三名</p>
-          <p>狼人每天晚上可以殺害一名玩家，包含自己本身</p>
-          <p>預言家有一名</p>
-          <p>預言家每天晚上可以查驗一名玩家身分</p>
-        </div>
-      </div>
-      <!-- 底部 -->
-      <div class="rule-footer"></div>
-    </div>
-    <!-- 顯示.md文件 -->
-    <div id="md" style="padding: 20px;"></div>
     <!-- PUG模板 -->
     <div id="pug"></div>
     <div id="rankBox"></div>
-</body>
+    <!-- 顯示.md文件 -->
+    <div id="md" style="padding: 20px;"></div>
+  </body>
 </html>

@@ -10,6 +10,8 @@ module.exports = {
         VENDOR:["lib-flexible"]
     },
     build:{
+        author:"",
+        time:"",
         // 打包到文件夹下
         outPutProjectPath:"src\/html\/web\/draculaDinner",
         // prod.js 内再次打包需要删除的选项

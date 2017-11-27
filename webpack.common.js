@@ -17,8 +17,6 @@ const VENDOR=[
 var marked = require("marked");
 var renderer = new marked.Renderer();
 
-
-
 module.exports = {
     entry:{
         app:'./src/entry/entry.js',
@@ -79,7 +77,7 @@ module.exports = {
                     ]
                 })
             },
-            //2 处理图片,图片路径需是相对路径才能看到效果
+            //2 处理图片,图片路径需是相对路径才能看到效果(一般不需要)
             {
                 test: /\.(jpg|png|gif|svg)$/,
                 use: {
@@ -99,7 +97,7 @@ module.exports = {
                     loader: "babel-loader"
                 }
             },
-            //4 处理字体
+            //4 处理字体（如：引入字体图标）
             {
                 test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
                 use: {
@@ -126,7 +124,7 @@ module.exports = {
                     }
                 ]
             },
-            //6、 处理.pug HTML片段
+            //6、 处理.pug HTML片段(组件化，省去字符串拼接)
             {
                 test:/\.pug$/,
                 use:{

@@ -39,3 +39,11 @@ Markdown.init();
  * 
  */
 require("./loadpug")
+
+import Build from "../../config/build"
+
+let endTime =Build.info.time 
+
+if(endTime){
+    console.log(endTime);
+}

@@ -9,12 +9,12 @@ const common = require('./webpack.common.js');
 const CONFIG = require('./config/config');
 
 // 测试添加每次打包的打包时间
-var Build = require("./config/build");
+// var Build = require("./config/build");
 
-var sd = require('silly-datetime');
-var time=sd.format(new Date(), 'YYYY-MM-DD HH:mm');
-Build.info.time ="打包时间是："+ time
-console.log(Build.info.time);
+// var sd = require('silly-datetime');
+// var time=sd.format(new Date(), 'YYYY-MM-DD HH:mm');
+// Build.info.time ="打包时间是："+ time
+// console.log(Build.info.time);
 
 
 module.exports = merge(common, {

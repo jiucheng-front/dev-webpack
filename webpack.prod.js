@@ -1,20 +1,11 @@
 var webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const merge = require('webpack-merge');
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const common = require('./webpack.common.js');
 
 const CONFIG = require('./config/config');
-
-// 测试添加每次打包的打包时间
-// var Build = require("./config/build");
-
-// var sd = require('silly-datetime');
-// var time=sd.format(new Date(), 'YYYY-MM-DD HH:mm');
-// Build.info.time ="打包时间是："+ time
-// console.log(Build.info.time);
 
 
 module.exports = merge(common, {
@@ -37,7 +28,9 @@ module.exports = merge(common, {
             }
         }),
         //2、压缩JS
-        new UglifyJSPlugin(),
+        new UglifyJSPlugin({
+            compress: { warnings: false }
+        }),
         //3、指定环境
         new webpack.DefinePlugin({
             'process.env': {

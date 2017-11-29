@@ -39,9 +39,10 @@ module.exports = {
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     // use: 'css-loader',
-                    use:[{
-                        loader: 'css-loader'
-                    }]
+                    use:[
+                        { loader: 'css-loader', options: { importLoaders: 1 }},
+                        'postcss-loader'
+                    ]
                 })
             },
             { //1.2.SASS的.scss 文件使用 style-loader、css-loader 和 sass-loader 来编译处理

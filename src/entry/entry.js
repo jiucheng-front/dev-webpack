@@ -9,7 +9,7 @@ import 'lib-flexible'
  * 二、引入CSS
  * 
  */
-require("../styles/base.css")
+require("../styles/common.css")
 require("../md/markdown.css")
 require("../md/github.css")
 // 1119 test less
@@ -38,12 +38,4 @@ Markdown.init();
  * 五、使用pug 组件
  * 
  */
-require("./loadpug")
-
-import Build from "../../config/build"
-
-let endTime =Build.info.time 
-
-if(endTime){
-    console.log(endTime);
-}
+// require("./loadpug")

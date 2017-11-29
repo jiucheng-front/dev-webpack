@@ -1,3 +1,9 @@
+body,html {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: auto;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
 *{
     margin: 0;
     padding: 0;
@@ -8,12 +14,7 @@
     background: none;
     -webkit-tap-highlight-color: transparent;
 }
-html {
-    height: auto;
-    font-family: Microsoft YaHei, Helvetica, sans-serif;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-}
+
 h1,h2,h3,h4,h5,h6{
 	font-style: normal;
 	font-weight: 100;

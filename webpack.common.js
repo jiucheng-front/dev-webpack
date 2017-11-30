@@ -7,10 +7,11 @@ const CONFIG = require('./config/config');
 
 // 4、提取第三方JS庫
 const VENDOR=[
-    "lib-flexible"
+    "lib-flexible",
+    // "jquery"
 ];
 
-// console.log(__dirname, CONFIG.build.outPutProjectPath);
+// console.log(__dirname, CONFIG.build.outputProjectPath);
 
 
 //5 markdown conver to html
@@ -25,7 +26,7 @@ module.exports = {
     },
     output: {
         // path: path.resolve(__dirname, "build"),
-        path: path.resolve(__dirname, CONFIG.build.outPutProjectPath),
+        path: path.resolve(__dirname, CONFIG.build.outputProjectPath),
         // filename: 'app_[chunkhash].js'
         // 加上/js就会输出到js文件夹下面
         filename:'js/[name]_[chunkhash].js'

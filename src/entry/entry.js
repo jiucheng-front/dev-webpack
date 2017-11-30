@@ -38,4 +38,4 @@ Markdown.init();
  * 五、使用pug 组件
  * 
  */
-// require("./loadpug")
+require("./loadpug")

@@ -37,7 +37,7 @@ module.exports = merge(common, {
                 'NODE_ENV': JSON.stringify('production')
             }
         }),
-        //4 、提取第三方JS庫，結合common內的vendor
+        //4 、提取不同入口使用共同的CSS、JS，結合common內的vendor
         new webpack.optimize.CommonsChunkPlugin({
             // vendor 的意义和之前相同
             // manifest文件是将每次打包都会更改的东西单独提取出来，保证没有更改的代码无需重新打包，这样可以加快打包速度

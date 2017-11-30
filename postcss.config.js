@@ -7,6 +7,8 @@ module.exports = {
         browsers: ['last 2 versions', '> 5%']
         },
         // CSS 内自动追加浏览器前缀
-        'autoprefixer':{}
+        'autoprefixer':{
+            browsers: ['last 2 versions']
+        }
     }
   }

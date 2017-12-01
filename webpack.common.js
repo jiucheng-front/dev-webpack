@@ -42,7 +42,7 @@ module.exports = {
                     // use: 'css-loader',
                     use:[
                         { loader: "css-loader", options: { importLoaders: 1 }},
-                        "postcss-loader"
+                        { loader: 'postcss-loader', options: { sourceMap: true } }
                     ]
                 })
             },
@@ -53,7 +53,8 @@ module.exports = {
                     fallback: 'style-loader',
                     use: [
                         "css-loader",
-                        "postcss-loader",
+                        // "postcss-loader",
+                        { loader: 'postcss-loader', options: { sourceMap: true } },
                         "sass-loader"
                     ]
                 })
@@ -65,7 +66,8 @@ module.exports = {
                     fallback:"style-loader",
                     use:[
                         "css-loader",
-                        "postcss-loader",
+                        // "postcss-loader",
+                        { loader: 'postcss-loader', options: { sourceMap: true } },
                         "less-loader"
                     ]
                 })
@@ -77,7 +79,8 @@ module.exports = {
                     fallback:"style-loader",
                     use:[
                         "css-loader",
-                        "postcss-loader",
+                        // "postcss-loader",
+                        { loader: 'postcss-loader', options: { sourceMap: true } },
                         "stylus-loader"
                     ]
                 })

@@ -29,7 +29,8 @@
 	+ js/css活动所需要的公用JS和CSS
 	+ root服务器根目录
 +  postcss.config.js：postcss配置文件
-	+  <code>postcss-import、postcss-cssnext、autoprefixer</code>
+	+  <code>postcss-import、postcss-cssnext、</code>
+	+  autoprefixer已经内置到postcss-cssnext
 + .babelrc :编译es6的配置
 + .gitignore：github提交的时候想要忽略提交的配置
 +  package.json：项目所需要的依赖包以及配置说明。

@@ -29,6 +29,8 @@ require("../md/markdown.css")
 require("../md/github.css")
 // 1119 test less
 require("../styles/less_mixin.less")
+
+require("../styles/mixin.scss")
 // test stylus
 require("../styles/test.styl")
 import Markdown from "./markdown"

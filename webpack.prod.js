@@ -9,6 +9,7 @@ const CONFIG = require('./config/config');
 
 
 module.exports = merge(common, {
+    devtool: 'source-map',
     output:{
         // 打包后html内引入文件是相对路径还是绝对路径
         publicPath: "./",
@@ -29,7 +30,9 @@ module.exports = merge(common, {
         }),
         //2、压缩JS
         new UglifyJSPlugin({
-            compress: { warnings: false }
+            compress: { warnings: false },
+            // 是否需要sourcePap
+            // sourceMap: true
         }),
         //3、指定环境
         new webpack.DefinePlugin({

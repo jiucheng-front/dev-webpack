@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "dev": "webpack-dev-server --open --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "dev": "webpack-dev-server --open --config webpack.dev.js --progress --inline --colors",
+    "build": "webpack --config webpack.prod.js --env==production"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,6 @@
     "lib-flexible": "^0.3.2"
   },
   "devDependencies": {
-    "autoprefixer": "^7.1.6",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",

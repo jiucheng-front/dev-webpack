@@ -4,6 +4,11 @@
  * 
  */
 
+if (process.env.NODE_ENV !== 'production') {
+    console.log('Looks like we are in development mode!');
+}
+
+
 const Markdown = {
     init(){
         console.log("come from markdown.js");

@@ -42,9 +42,9 @@ module.exports = merge(common, {
         }),
         //4 、提取不同入口使用共同的CSS、JS，結合common內的vendor
         new webpack.optimize.CommonsChunkPlugin({
-            // vendor 的意义和之前相同
-            // manifest文件是将每次打包都会更改的东西单独提取出来，保证没有更改的代码无需重新打包，这样可以加快打包速度
-            names: ['vendor', 'manifest'],
+            // vendors 把第三方JS库提取出来，每次逻辑代码更新，vendors不会更新能缓存(提高性能)
+            // manifest文件是将每次打包都会更改的东西单独提取出来，保证没有更改的vendors代码无需重新打包，这样可以加快打包速度
+            names: ['vendors', 'manifest'],
             // 配合 manifest 文件使用
             minChunks: Infinity
         })

@@ -40,6 +40,7 @@ var str = template({ data:items });
 // console.log(str);
 pugBox.innerHTML = str;
 
+console.log("this is from loadug.js");
 //
 // var rank = require("../pug/rank.pug");
 // var rankBox = document.getElementById("rankBox");

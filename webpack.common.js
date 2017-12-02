@@ -23,9 +23,9 @@ module.exports = {
     entry:{
         // 2、0 多入口
         app:'./src/entry/index.js',
-        detail:"./src/entry/detail.js",
+        // detail:"./src/entry/detail.js",
         //1.1 不要JQ直接注释就不会打包，不然使用不使用都会打包JQ为 vendor.js
-        vendor: CONFIG.dev.VENDOR
+        vendors: CONFIG.dev.VENDOR
     },
     output: {
         // path: path.resolve(__dirname, "build"),
@@ -161,7 +161,7 @@ module.exports = {
             filename: 'index.html',
             favicon:'./images/favicon.ico',
             // 2.3 需要引入的chunk，不配置就会引入所有页面的资源
-            chunks: ['vendors', 'app'],
+            // chunks: ['vendors', 'app'],
             minify: {
                 //移除HTML中的注释
                 removeComments: true, 
@@ -169,24 +169,24 @@ module.exports = {
                 collapseWhitespace: false,
                 collapseWhitespace:true
             },
-            // template: CONFIG.dev.indexFile
-            template: "./src/pages/index.html"
+            template: CONFIG.dev.indexFile
+            // template: "./src/pages/index.html"
         }),
-        new HtmlWebpackPlugin({
-            title: 'App',
-            filename: 'detail.html',
-            favicon:'./images/favicon.ico',
-            // 2.3 需要引入的chunk，不配置就会引入所有页面的资源
-            chunks: ['vendors', 'detail'],
-            minify: {
-                //移除HTML中的注释
-                removeComments: true, 
-                //删除空白符与换行符
-                collapseWhitespace: false,
-                collapseWhitespace:true
-            },
-            // template: CONFIG.dev.indexFile
-            template: "./src/pages/detail.html"
-        }),
+        // new HtmlWebpackPlugin({
+        //     title: 'App',
+        //     filename: 'detail.html',
+        //     favicon:'./images/favicon.ico',
+        //     // 2.3 需要引入的chunk，不配置就会引入所有页面的资源
+        //     chunks: ['vendors', 'detail'],
+        //     minify: {
+        //         //移除HTML中的注释
+        //         removeComments: true, 
+        //         //删除空白符与换行符
+        //         collapseWhitespace: false,
+        //         collapseWhitespace:true
+        //     },
+        //     // template: CONFIG.dev.indexFile
+        //     template: "./src/pages/detail.html"
+        // }),
     ]
 };

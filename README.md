@@ -14,7 +14,8 @@
 + 6、压缩、提取JS
 + 7、url-loader处理图片为base64，使用时图片必须是相对路径否则无效(**一般不用**)
 + 8、external外部配置文件(开发依赖)，例如：项目用到jQuery(**有vendor该项省略**)
-+ 9、vendor(提取第三方JS库或者公用代码，如JQ、手淘lib-flexible)
++ 9、vendors(提取第三方JS库或者公用代码，如JQ、手淘lib-flexible)
+	+ 这样每次逻辑代码更新，第三方库的版本不会更新可以缓存(提高性能)
 + 10、markDown文件自动转为html(类似github内的README.md默认样式)
 + 11、添加pug、和pug-loader处理html组件化
 + 12、CSS、LESS、SCSS、Stylus自动追加浏览器前缀

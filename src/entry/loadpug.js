@@ -6,7 +6,7 @@
  */
 "use strict";
 
-var template = require("../pug/Doc.pug");
+var template = require("../components/Doc.pug");
 var pugBox = document.getElementById("pug");
 let items=[
     {

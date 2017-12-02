@@ -17,8 +17,8 @@ module.exports = {
         author:"",
         time:"",
         // 打包到文件夹下
-        outputProjectPath:"src\/html\/web\/draculaDinner",
+        outputProjectPath:"src\/html\/web\/webpack-demo",
         // prod.js 内再次打包需要删除的选项
-        cleanLsit:["src/html/web/draculaDinner/css","src/html/web/draculaDinner/js","src/html/web/draculaDinner/index.html"]
+        cleanLsit:["src/html/web/webpack-demo/css","src/html/web/webpack-demo/js","src/html/web/webpack-demo/index.html"]
     }
 }

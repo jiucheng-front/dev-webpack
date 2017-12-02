@@ -18,9 +18,12 @@ const VENDOR=[
 var marked = require("marked");
 var renderer = new marked.Renderer();
 
+// entry:https://segmentfault.com/a/1190000009916612
 module.exports = {
     entry:{
-        app:'./src/entry/entry.js',
+        // 2、0 多入口
+        app:'./src/entry/index.js',
+        detail:"./src/entry/detail.js",
         //1.1 不要JQ直接注释就不会打包，不然使用不使用都会打包JQ为 vendor.js
         vendor: CONFIG.dev.VENDOR
     },
@@ -29,7 +32,9 @@ module.exports = {
         path: path.resolve(__dirname, CONFIG.build.outputProjectPath),
         // filename: 'app_[chunkhash].js'
         // 加上/js就会输出到js文件夹下面
-        filename:'js/[name]_[chunkhash].js'
+        filename:'js/[name]_[chunkhash].js',
+        // 2、1
+        chunkFilename: 'js/[id].chunk.js'
     },
     module: {
         rules: [
@@ -155,8 +160,33 @@ module.exports = {
             title: 'App',
             filename: 'index.html',
             favicon:'./images/favicon.ico',
-            // minify:true,
-            template: CONFIG.dev.indexFile
+            // 2.3 需要引入的chunk，不配置就会引入所有页面的资源
+            chunks: ['vendors', 'app'],
+            minify: {
+                //移除HTML中的注释
+                removeComments: true, 
+                //删除空白符与换行符
+                collapseWhitespace: false,
+                collapseWhitespace:true
+            },
+            // template: CONFIG.dev.indexFile
+            template: "./src/pages/index.html"
+        }),
+        new HtmlWebpackPlugin({
+            title: 'App',
+            filename: 'detail.html',
+            favicon:'./images/favicon.ico',
+            // 2.3 需要引入的chunk，不配置就会引入所有页面的资源
+            chunks: ['vendors', 'detail'],
+            minify: {
+                //移除HTML中的注释
+                removeComments: true, 
+                //删除空白符与换行符
+                collapseWhitespace: false,
+                collapseWhitespace:true
+            },
+            // template: CONFIG.dev.indexFile
+            template: "./src/pages/detail.html"
         }),
     ]
 };

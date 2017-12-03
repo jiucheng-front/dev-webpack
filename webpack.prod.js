@@ -7,7 +7,6 @@ const common = require('./webpack.common.js');
 
 const CONFIG = require('./config/config');
 
-
 module.exports = merge(common, {
     devtool: 'source-map',
     output:{

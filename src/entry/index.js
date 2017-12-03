@@ -92,3 +92,11 @@ console.log("this is from index.js");
 //     console.log("over");
 //     $(this).addClass("hover");
 // });
+
+
+/*
+*七、使用lazyloading
+*
+*/
+// have error
+// require("./detail");

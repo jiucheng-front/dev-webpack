@@ -10,6 +10,7 @@ module.exports = {
         // 第三方库JQ如果使用再加在 DENDOR中
         VENDOR:[
             "lib-flexible",
+            "lodash"
             // "jquery"
         ]
     },

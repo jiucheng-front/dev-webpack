@@ -1,6 +1,8 @@
+
+"use strict";
 /**
  * 一、引入flexible(1,2方式)
- * 1、require("../plugins/flexible");
+ * 1、require("path/flexible");
  */
 // 2、11-19 使用 lib-flexible npm包代替flexible.js,需要配置vendor 提取打包
 import 'lib-flexible'
@@ -17,8 +19,8 @@ require("../styles/common.css")
  * 三、引入逻辑
  * 
  */
-import Test from "./test"
-Test.backTop("backTop")
+import Utils from "../common/Utils"
+Utils.backTop("backTop")
 
 
 /**
@@ -33,15 +35,51 @@ require("../styles/less_mixin.less")
 require("../styles/mixin.scss")
 // test stylus
 require("../styles/test.styl")
-import Markdown from "./markdown"
+import Markdown from "../md/markdown"
 Markdown.init();
 
 
 /**
  * 五、使用pug 组件
- * 
+ * https://github.com/pugjs/pug-loader
+ * https://pugjs.org/api/reference.html
  */
-require("./loadpug")
+
+var template = require("../components/Doc.pug");
+var pugBox = document.getElementById("pug");
+let items=[
+    {
+        name:"less",
+        Englink:"http://lesscss.org/",
+        Chlink:"http://less.bootcss.com/"
+    },
+    {
+        name:"sass",
+        Englink:"http://sass-lang.com/",
+        Chlink:"https://www.sass.hk/"
+    },
+    {
+        name:"stylus",
+        Englink:"http://stylus-lang.com/",
+        Chlink:"http://www.zhangxinxu.com/jq/stylus/"
+    },
+    {
+        name:"webpack",
+        Englink:"https://webpack.js.org/",
+        Chlink:"https://doc.webpack-china.org/"
+    },
+    {
+        name:"es6",
+        Englink:"https://ponyfoo.com/articles/es6",
+        Chlink:"http://es6.ruanyifeng.com/"
+    }
+]
+
+var str = template({ data:items });
+// console.log(str);
+pugBox.innerHTML = str;
+
+console.log("this is from index.js");
 
 
 /**

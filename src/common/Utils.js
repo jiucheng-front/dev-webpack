@@ -1,5 +1,5 @@
 
-class Test{
+class Utils{
     constructor(){
 
     }
@@ -25,4 +25,4 @@ class Test{
     }
 }
 
-module.exports = Test;
+module.exports = Utils;

@@ -1,12 +1,8 @@
 const path = require('path');
-
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const CONFIG = require('./config/config');
-
-// console.log(__dirname, CONFIG.build.outputProjectPath);
-
 
 //5 markdown conver to html
 var marked = require("marked");
@@ -15,9 +11,9 @@ var renderer = new marked.Renderer();
 // entry:https://segmentfault.com/a/1190000009916612
 module.exports = {
     entry:{
-        // 2、0 多入口
+        // 2、0 是否多入口
         app:'./src/entry/index.js',
-        detail:"./src/entry/detail.js",
+        // detail:"./src/entry/detail.js",
         //1.1 不要JQ直接注释就不会打包，不然使用不使用都会打包JQ为 vendor.js
         vendors: CONFIG.dev.VENDOR
     },
@@ -155,7 +151,7 @@ module.exports = {
             filename: 'index.html',
             favicon:'./images/favicon.ico',
             // 2.3 需要引入的chunk，不配置就会引入所有页面的资源
-            chunks: ['vendors',"app"],
+            // chunks: ['vendors',"app"],
             minify: {
                 //移除HTML中的注释
                 removeComments: true, 
@@ -164,23 +160,19 @@ module.exports = {
                 collapseWhitespace:true
             },
             template: CONFIG.dev.indexFile
-            // template: "./src/pages/index.html"
         }),
-        new HtmlWebpackPlugin({
-            title: 'App',
-            filename: 'detail.html',
-            favicon:'./images/favicon.ico',
-            // 2.3 需要引入的chunk，不配置就会引入所有页面的资源
-            chunks: ['vendors',"detail"],
-            minify: {
-                //移除HTML中的注释
-                removeComments: true, 
-                //删除空白符与换行符
-                collapseWhitespace: false,
-                collapseWhitespace:true
-            },
-            // template: CONFIG.dev.indexFile
-            template: "./src/pages/detail.html"
-        }),
+        // 多页
+        // new HtmlWebpackPlugin({
+        //     title: 'App',
+        //     filename: 'detail.html',
+        //     favicon:'./images/favicon.ico',
+        //     chunks: ['vendors',"detail"],
+        //     minify: {
+        //         removeComments: true, 
+        //         collapseWhitespace: false,
+        //         collapseWhitespace:true
+        //     },
+        //     template: "./src/pages/detail.html"
+        // })
     ]
 };

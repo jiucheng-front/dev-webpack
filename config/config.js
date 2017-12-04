@@ -3,7 +3,7 @@
 module.exports = {
     dev:{
         // 项目开发html模板
-        indexFile:"template.index.html",
+        indexFile:"template.index.ejs",
         port:4200,
         // 本地服务器根目录(可以根据上线目录灵活调节)
         serverRoot:"/src",

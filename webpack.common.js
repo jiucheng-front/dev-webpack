@@ -147,7 +147,7 @@ module.exports = {
             allChunks: true
         }),
         new HtmlWebpackPlugin({
-            title: 'App',
+            title: 'Dev template',
             filename: 'index.html',
             favicon:'./images/favicon.ico',
             // 2.3 需要引入的chunk，不配置就会引入所有页面的资源
@@ -172,7 +172,7 @@ module.exports = {
         //         collapseWhitespace: false,
         //         collapseWhitespace:true
         //     },
-        //     template: "./src/pages/detail.html"
+        //     template: "./src/pages/detail.ejs"
         // })
     ]
 };

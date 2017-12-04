@@ -82,6 +82,12 @@ pugBox.innerHTML = str;
 console.log("this is from index.js");
 
 
+let mainTemp = require("../components/main.pug");
+let mainDom = document.getElementById("main");
+let mainStr = mainTemp();
+mainDom.innerHTML = mainStr
+
+
 /**
  * 六、如果使用JQ(config内，common.js内要添加)
  * 

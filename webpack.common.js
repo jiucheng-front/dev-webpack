@@ -24,7 +24,9 @@ module.exports = {
         // 加上/js就会输出到js文件夹下面
         filename:'js/[name]_[chunkhash].js',
         // 2、1
-        chunkFilename: 'js/[id].chunk.js'
+        // chunkFilename: 'js/[id].chunk.js'
+        // 3.0 异步组件带上
+        chunkFilename: 'js/[name].[chunkhash:5].chunk.js'
     },
     module: {
         rules: [

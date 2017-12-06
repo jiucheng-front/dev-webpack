@@ -1,4 +1,5 @@
 
+const path = require("path");
 "use strict";
 /**
  * 一、引入flexible(1,2方式)
@@ -81,11 +82,22 @@ pugBox.innerHTML = str;
 
 console.log("this is from index.js");
 
-
+// 五、1
 let mainTemp = require("../components/main.pug");
 let mainDom = document.getElementById("main");
 let mainStr = mainTemp();
 mainDom.innerHTML = mainStr
+
+// 五、2 测试异步组件
+let testDom = document.getElementById("test");
+
+testDom.addEventListener("click",function(){
+    require.ensure([], function() {
+        var test = require('./test.js');
+        test();
+    })
+});
+
 
 
 /**

@@ -22,6 +22,9 @@
 + 13、CSS模块化即CSS内使用<code>@import 其他CSS文件</code>
 + 14、CSS内使用CSS3+新语法
 + 15、压缩打包后的html文件
++ 16、异步组件
+	+ <code>chunkFilename</code>
+	+ <code>require.ensure</code>
 
 
 ### 三、文件目录介绍

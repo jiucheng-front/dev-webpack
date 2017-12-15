@@ -1,0 +1,1 @@
+webpackJsonp([0],{23:function(o,e,t){"use strict";function n(){var o=document.getElementById("test");console.log("异步组件调用成功"),console.log(o)}o.exports=n}});

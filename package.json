@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "dev": "webpack-dev-server --open --config webpack.dev.js --progress --inline --colors",
-    "build": "webpack --config webpack.prod.js --progress --colors --env==production"
+    "build": "set NODE_ENV==production && webpack --config webpack.prod.js --progress --colors"
   },
   "repository": {
     "type": "git",

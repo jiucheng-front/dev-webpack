@@ -1,13 +1,11 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
 const CONFIG = require('./config/config');
 
 //5 markdown conver to html
 var marked = require("marked");
 var renderer = new marked.Renderer();
-
 // entry:https://segmentfault.com/a/1190000009916612
 module.exports = {
     entry:{

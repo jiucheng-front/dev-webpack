@@ -10,7 +10,8 @@ var renderer = new marked.Renderer();
 module.exports = {
     entry:{
         // 2、0 是否多入口
-        app:'./src/entry/index.js',
+        // app:'./src/entry/index.js',
+        app:'./src/entry/login.js',
         // detail:"./src/entry/detail.js",
         //1.1 不要JQ直接注释就不会打包，不然使用不使用都会打包JQ为 vendor.js
         vendors: CONFIG.dev.VENDOR

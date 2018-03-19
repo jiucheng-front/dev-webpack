@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <meta name="description" content="" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="cleartype" content="on" />
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+    <script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js"></script>
+</head>
+
+<body>
+    <script>
+        // Load the SDK asynchronously
+        // (function (d, s, id) {
+        //     var js, fjs = d.getElementsByTagName(s)[0];
+        //     if (d.getElementById(id)) return;
+        //     js = d.createElement(s);
+        //     js.id = id;
+        //     js.src = "//connect.facebook.net/en_US/sdk.js";
+        //     fjs.parentNode.insertBefore(js, fjs);
+        // }(document, 'script', 'facebook-jssdk'))
+    </script>
+    <div class="main">
+        <div class="btn-box">
+            <a href="javascript:;" id="wchat">微信</a>
+            <a href="javascript:;" id="facebook">Facebook</a>
+            <a href="javascript:;" id="google">G+</a>
+        </div>
+    </div>
+    <!--  -->
+    <script>
+        // 初始化
+        FB.init({
+            appId: '1787229064893053',
+            DisplayName: "浪Live - 浪你人氣爆紅的直播社群平台",
+            cookie: true, // enable cookies to allow the server to access 
+            // the session
+            xfbml: true, // parse social plugins on this page
+            version: 'v2.8' // use graph api version 2.8
+        });
+
+
+        // DOM
+        var chat = document.getElementById("wchat")
+        var facebtn = document.getElementById("facebook")
+
+
+        // function
+        function statusChangeCallback(response) {
+            if (response.status === 'connected') {
+                // Logged into your app and Facebook.
+                var accessToken = response.authResponse.accessToken;
+                console.log(accessToken)
+            } else {
+                // The person is not logged into your app or we are unable to tell.
+                console.log("失败")
+            }
+        }
+
+        facebtn.addEventListener("click", function () {
+            FB.login(function (response) {
+                //登录回调函数
+                statusChangeCallback(response);
+                //需要获取的信息scope
+            }, {
+                scope: 'email'
+            });
+        })
+    </script>
+</body>
+
+</html>

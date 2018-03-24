@@ -8,7 +8,6 @@ const path = require("path");
 // 2、11-19 使用 lib-flexible npm包代替flexible.js,需要配置vendor 提取打包
 import 'lib-flexible'
 
-
 /**
  * 二、引入CSS
  * 
@@ -28,6 +27,7 @@ Utils.backTop("backTop")
  * 四、渲染markdown
  * 
  */
+
 require("../md/markdown.css")
 require("../md/github.css")
 // 1119 test less

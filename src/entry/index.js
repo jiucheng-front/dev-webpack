@@ -1,4 +1,3 @@
-
 const path = require("path");
 "use strict";
 /**
@@ -37,7 +36,7 @@ require("../styles/mixin.scss")
 // test stylus
 require("../styles/test.styl")
 import Markdown from "../md/markdown"
-Markdown.init();
+// Markdown.init();
 
 
 /**
@@ -48,37 +47,38 @@ Markdown.init();
 
 var template = require("../components/Doc.pug");
 var pugBox = document.getElementById("pug");
-let items=[
-    {
-        name:"less",
-        Englink:"http://lesscss.org/",
-        Chlink:"http://less.bootcss.com/"
+let items = [{
+        name: "less",
+        Englink: "http://lesscss.org/",
+        Chlink: "http://less.bootcss.com/"
     },
     {
-        name:"sass",
-        Englink:"http://sass-lang.com/",
-        Chlink:"https://www.sass.hk/"
+        name: "sass",
+        Englink: "http://sass-lang.com/",
+        Chlink: "https://www.sass.hk/"
     },
     {
-        name:"stylus",
-        Englink:"http://stylus-lang.com/",
-        Chlink:"http://www.zhangxinxu.com/jq/stylus/"
+        name: "stylus",
+        Englink: "http://stylus-lang.com/",
+        Chlink: "http://www.zhangxinxu.com/jq/stylus/"
     },
     {
-        name:"webpack",
-        Englink:"https://webpack.js.org/",
-        Chlink:"https://doc.webpack-china.org/"
+        name: "webpack",
+        Englink: "https://webpack.js.org/",
+        Chlink: "https://doc.webpack-china.org/"
     },
     {
-        name:"es6",
-        Englink:"https://ponyfoo.com/articles/es6",
-        Chlink:"http://es6.ruanyifeng.com/"
+        name: "es6",
+        Englink: "https://ponyfoo.com/articles/es6",
+        Chlink: "http://es6.ruanyifeng.com/"
     }
 ]
 
-var str = template({ data:items });
+var str = template({
+    data: items
+});
 // console.log(str);
-pugBox.innerHTML = str;
+// pugBox.innerHTML = str;
 
 console.log("this is from index.js");
 
@@ -91,8 +91,8 @@ mainDom.innerHTML = mainStr
 // 五、2 测试异步组件
 let testDom = document.getElementById("test");
 
-testDom.addEventListener("click",function(){
-    require.ensure([], function() {
+testDom.addEventListener("click", function () {
+    require.ensure([], function () {
         var test = require('./test.js');
         test();
     })
@@ -113,8 +113,33 @@ testDom.addEventListener("click",function(){
 
 
 /*
-*七、使用lazyloading
-*
-*/
-// have error
-// require("./detail");
+ *七、使用ES6 class 声明，状态回调
+ *
+ */
+
+
+import Students from "./other/students"
+
+class School {
+    constructor({
+        resetCallback
+    }) {
+        this.resetCallback = resetCallback
+        this._init()
+    }
+    _init() {
+        this.studentsOne = new Students({
+            resetCallback: this.resetCallback
+        })
+    }
+}
+
+let school = new School({
+    resetCallback: (state) => {
+        if (state == 1) {
+            console.log("水开了！")
+        } else {
+            console.log("还没有开呢~")
+        }
+    }
+})

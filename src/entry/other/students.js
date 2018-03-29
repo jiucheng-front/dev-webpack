@@ -15,7 +15,7 @@ class Students {
         console.log("from students moudule!")
     }
     _testClick(status) {
-        console.log(status)
+        // console.log(status)
         let resetStatus = this.status == 1 ? 1 : 0
         // console.log(resetStatus)
         // 抛出回调

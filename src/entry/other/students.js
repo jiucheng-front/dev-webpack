@@ -9,7 +9,19 @@ class Students {
     }
     _init() {
         this.container.innerHTML = "点击测试"
-        console.log("Students1")
+        this.container.addEventListener("click", e => {
+            this._testClick(this.status)
+        })
+        console.log("from students moudule!")
+    }
+    _testClick(status) {
+        console.log(status)
+        let resetStatus = this.status == 1 ? 1 : 0
+        // console.log(resetStatus)
+        // 抛出回调
+        this.resetCallback(resetStatus)
+        // 重置当前状态
+        this.status = 0
     }
 }
 

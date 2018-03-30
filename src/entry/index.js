@@ -137,9 +137,9 @@ class School {
 let school = new School({
     resetCallback: (state) => {
         if (state == 1) {
-            console.log("水开了！")
+            console.log("有学生迟到了！！")
         } else {
-            console.log("还没有开呢~")
+            console.log("今天没有学生迟到~")
         }
     }
 })

@@ -39,5 +39,4 @@
 + .babelrc :编译es6的配置
 + .gitignore：github提交的时候想要忽略提交的配置
 +  package.json：项目所需要的依赖包以及配置说明。
-+  tsconfig.json：编译TypeScript的配置参数。编译后让多数浏览器都支持的javascript
-+ .html模板样式，最终会自动添加到指定目录内
++ .html和.ejs都是HTML模板样式，最终会自动添加到指定目录内

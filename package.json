@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:wjf444128852/Langlive-WebpackDev.git"
+    "url": "git@github.com:wjf444128852/dev-webpack.git"
   },
   "author": "nine",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/wjf444128852/Langlive-WebpackDev/issues"
+    "url": "https://github.com/wjf444128852/dev-webpack/issues"
   },
-  "homepage": "https://github.com/wjf444128852/Langlive-WebpackDev#readme",
+  "homepage": "https://github.com/wjf444128852/dev-webpack#readme",
   "dependencies": {
     "jquery": "^3.2.1",
     "lib-flexible": "^0.3.2",

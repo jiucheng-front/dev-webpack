@@ -19,7 +19,7 @@ module.exports = merge(common, {
         proxy: {
             "/api":{
                 // 最后这个是要换的
-                target:"http://zengsimin-dev.langlive.com:80",
+                target:"http://xxx.sss.com:80",
                 changeOrigin:true,
                 pathRewrite:{
                 "^/api":""

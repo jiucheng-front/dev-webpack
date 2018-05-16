@@ -18,7 +18,7 @@
 	+ 这样每次逻辑代码更新，第三方库的版本不会更新可以缓存(提高性能)
 + 10、markDown文件自动转为html(类似github内的README.md默认样式)
 + 11、添加pug、和pug-loader处理html组件化
-+ 12、CSS、LESS、SCSS、Stylus自动追加浏览器前缀
++ 12、CSS、LESS、SCSS、Stylus自动追加浏览器前缀(node-sass经常安装失败建议放弃)
 + 13、CSS模块化即CSS内使用<code>@import 其他CSS文件</code>
 + 14、CSS内使用CSS3+新语法
 + 15、压缩打包后的html文件

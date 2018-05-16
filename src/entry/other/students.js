@@ -8,7 +8,7 @@ class Students {
         this._init()
     }
     _init() {
-        this.container.innerHTML = "点击测试"
+        this.container.innerHTML = "点击测试父組件的方法"
         this.container.addEventListener("click", e => {
             this._testClick(this.status)
         })

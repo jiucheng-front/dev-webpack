@@ -82,7 +82,7 @@ var str = template({
 
 console.log("this is from index.js");
 
-// 五、1
+// 五、1 使用jade分离HTML(组件化)
 let mainTemp = require("../components/main.pug");
 let mainDom = document.getElementById("main");
 let mainStr = mainTemp();

@@ -1,8 +1,8 @@
 class Students {
     constructor({
-        resetCallback
+        parentHandle
     }) {
-        this.resetCallback = resetCallback
+        this.parentHandle = parentHandle
         this.container = document.getElementById("school")
         this.status = 1
         this._init()
@@ -13,15 +13,16 @@ class Students {
             this._testClick(this.status)
         })
         console.log("from students moudule!")
+
     }
     _testClick(status) {
         // console.log(status)
-        let resetStatus = this.status == 1 ? 1 : 0
-        // console.log(resetStatus)
-        // 抛出回调
-        this.resetCallback(resetStatus)
+        let resetStatus = this.status ? 1 : 0
+        console.log(resetStatus)
         // 重置当前状态
-        this.status = 0
+        this.status = !this.status
+        // 抛出回调
+        this.parentHandle(resetStatus)
     }
 }
 

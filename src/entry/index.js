@@ -122,20 +122,20 @@ import Students from "./other/students"
 
 class School {
     constructor({
-        resetCallback
+        parentHandle
     }) {
-        this.resetCallback = resetCallback
+        this.parentHandle = parentHandle
         this._init()
     }
     _init() {
         this.studentsOne = new Students({
-            resetCallback: this.resetCallback
+            parentHandle: this.parentHandle
         })
     }
 }
 
 let school = new School({
-    resetCallback: (state) => {
+    parentHandle: (state) => {
         if (state == 1) {
             console.log("有学生迟到了！！")
         } else {

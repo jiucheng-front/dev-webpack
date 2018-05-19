@@ -124,7 +124,8 @@ class School {
     constructor({
         parentHandle
     }) {
-        this.parentHandle = parentHandle
+        // 方式1、外部传入
+        // this.parentHandle = parentHandle
         this._init()
     }
     _init() {
@@ -132,9 +133,18 @@ class School {
             parentHandle: this.parentHandle
         })
     }
+    // 方式、2声明在内部
+    parentHandle(status) {
+        if (status == 1) {
+            console.log("打开！")
+        } else {
+            console.log("关闭！")
+        }
+    }
 }
 
 let school = new School({
+    // 1、外部传入
     parentHandle: (state) => {
         if (state == 1) {
             console.log("有学生迟到了！！")

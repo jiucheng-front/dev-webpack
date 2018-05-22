@@ -6,7 +6,7 @@ function Testfn(){
     var element = document.createElement('div');
     var button = document.createElement('button');
     var br = document.createElement('br');
-    button.innerHTML = 'Click me and look at the console!';
+    button.innerHTML = 'Click me and look at the console!from test.js';
     element.innerHTML = ['Hello', 'webpack'].join('');
     element.appendChild(br);
     element.appendChild(button);

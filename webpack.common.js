@@ -88,8 +88,8 @@ module.exports = {
                     loader: 'url-loader',
                     options: {
                         limit: 10000,
-                        // 默认打包到dist下的img文件夹
-                        name:'img/[name].[hash:7].[ext]'
+                        // 默认打包到输出文件夹下的image文件夹
+                        name:'images/[name].[hash:7].[ext]'
                     }
                 }
             },

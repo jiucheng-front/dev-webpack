@@ -10,12 +10,27 @@ body
     width: .65rem
     height: .95rem
     position: fixed
+    z-index: 99
+    
     right 15px
     bottom: 20px
-    // background-image: url(/html/web/webpack-demo/images/top.png)
+    // background-image: url(/webpack-demo/images/top.png)
+
+    // 相对路径小于1M 的图片打包后是BASE64
     background-image: url(./top.png)
     background-size: 100% 100%
     background-repeat: no-repeat
+
+
+.banner{
+    width: 100%
+    height 4.5rem
+
+    background-image: url(./baner02.jpg)
+    background-position: center center
+    background-size: auto 100%
+    background-repeat: no-repeat
+}
 
 
 #md
@@ -80,6 +95,7 @@ body
         left 50%
         margin-left -150px
         top 27%
+        z-index 10
 
         background-image linear-gradient(165deg,rgba(255,255,255,0.15) 25%,transparent 25%),linear-gradient(to right,#002525,#002525),linear-gradient(to right,transparent 20%,#1aa093 20%,#1aa093 40%,transparent 40%,transparent 60%,#1aa093 60%,#1aa093 80%,transparent 80%),radial-gradient(circle,#1ba99b 50%,transparent 50%),radial-gradient(circle,#1ba99b 50%,transparent 50%),radial-gradient(circle,#1ba99b 50%,transparent 50%),linear-gradient(to bottom,#40e0d0 90%,#21ccbb 90%)
         background-size 164px 130px,170px 130px,100% 10px,16px 16px,16px 16px,16px 16px,100% 100%
@@ -95,6 +111,8 @@ body
         width: 170px
         height: 130px
         position: absolute
+        z-index 10
+
         left: 50%
         margin-left: -85px
         top: 38%

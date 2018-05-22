@@ -18,7 +18,7 @@ require("../styles/common.css")
  * 三、引入逻辑
  * 
  */
-import Utils from "../common/Utils"
+import Utils from "../store/Utils"
 Utils.backTop("backTop")
 
 
@@ -45,8 +45,8 @@ import Markdown from "../md/markdown"
  * https://pugjs.org/api/reference.html
  */
 
-var template = require("../components/Doc.pug");
-var pugBox = document.getElementById("pug");
+var template = require("../components/Doc.pug")
+var pugBox = document.getElementById("pug")
 let items = [{
         name: "less",
         Englink: "http://lesscss.org/",
@@ -80,21 +80,21 @@ var str = template({
 // console.log(str);
 // pugBox.innerHTML = str;
 
-console.log("this is from index.js");
+console.log("this is from index.js")
 
 // 五、1 使用jade分离HTML(组件化)
-let mainTemp = require("../components/main.pug");
-let mainDom = document.getElementById("main");
-let mainStr = mainTemp();
+let mainTemp = require("../components/main.pug")
+let mainDom = document.getElementById("main")
+let mainStr = mainTemp()
 mainDom.innerHTML = mainStr
 
 // 五、2 测试异步组件
-let testDom = document.getElementById("test");
+let testDom = document.getElementById("test")
 
 testDom.addEventListener("click", function () {
     require.ensure([], function () {
-        var test = require('./test.js');
-        test();
+        var test = require('./test.js')
+        test()
     })
 });
 

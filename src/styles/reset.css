@@ -3,6 +3,7 @@ body,html {
     height: auto;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    position: relative;
 }
 *{
     margin: 0;
@@ -82,4 +83,10 @@ input[type="search"]::-webkit-search-decoration {
 .container{
     max-width: 10rem;
     margin: 0 auto
+}
+
+.clear-fix:before,.clear-fix:after{
+    display: table;
+    content: "";
+    clear: both;
 }

@@ -1,5 +1,5 @@
-const path = require("path");
-"use strict";
+const path = require("path")
+"use strict"
 /**
  * 一、引入flexible(1,2方式)
  * 1、require("path/flexible");

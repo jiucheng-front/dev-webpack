@@ -21,7 +21,7 @@ module.exports = {
         path: path.resolve(__dirname, CONFIG.build.outputProjectPath),
         // filename: 'app_[chunkhash].js'
         // 加上/js就会输出到js文件夹下面
-        filename:'js/[name]_[chunkhash].js',
+        filename:'js/[name].[chunkhash].js',
         // 2、1
         // chunkFilename: 'js/[id].chunk.js'
         // 3.0 异步组件带上

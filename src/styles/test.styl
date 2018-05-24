@@ -17,21 +17,26 @@ body
     // background-image: url(/webpack-demo/images/top.png)
 
     // 相对路径小于1M 的图片打包后是BASE64
-    background-image: url(./top.png)
+    background-image: url(../images/top.png)
     background-size: 100% 100%
     background-repeat: no-repeat
 
 
-.banner{
+.absolute-img,.relative-img
     width: 100%
     height 4.5rem
 
-    background-image: url(/images/baner02.jpg)
     background-position: center center
     background-size: auto 100%
     background-repeat: no-repeat
-}
 
+    position relative
+
+.absolute-img
+    background-image: url(/images/baner02.jpg)
+
+.relative-img
+    background-image: url(../images/baner02.jpg)
 
 #md
     // abs-v-center(50px)

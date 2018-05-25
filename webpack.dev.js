@@ -6,6 +6,8 @@ const common = require('./webpack.common.js');
 const CONFIG = require('./config/config');
 
 module.exports = merge(common, {
+    // mode(string): development/production  (https://www.webpackjs.com/concepts/mode/),这里配置的话在run dev的时候无需配置了
+    // mode: "development",
     // devtool: 'eval-source-map',
     devServer: {
         //1、 可指定服务器根目录如：src/root 方便本地查看，前提有该文件夹
@@ -17,12 +19,12 @@ module.exports = merge(common, {
         host: "localhost",
         //3、 是否需要跨域去请求接口本地测试
         proxy: {
-            "/api":{
+            "/api": {
                 // 最后这个是要换的
-                target:"http://xxx.sss.com:80",
-                changeOrigin:true,
-                pathRewrite:{
-                "^/api":""
+                target: "http://xxx.sss.com:80",
+                changeOrigin: true,
+                pathRewrite: {
+                    "^/api": ""
                 }
             }
         }

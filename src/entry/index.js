@@ -119,9 +119,7 @@ testDom.addEventListener("click", function () {
 
 // School-Students父子模块通信
 import Students from "./other/students"
-import {
-    userInfo
-} from "os";
+
 class School {
     constructor({
         parentHandle,
@@ -173,13 +171,13 @@ class School {
     }
 }
 
-// class Family {
-//     constructor({
-//         sendScore,
-//     }) {
-//         this.sendScore
-//     }
-// }
+class Family {
+    constructor({
+        sendScore,
+    }) {
+        this.getScore = sendScore
+    }
+}
 let PudongArea = {
     school: new School({
         // 1、外部传入
@@ -192,8 +190,14 @@ let PudongArea = {
         },
         sendScore: (userInfo) => {
             if (userInfo) {
+                console.log(this, "PudongArea")
                 console.log(userInfo, "用户1")
             }
+        }
+    }),
+    family: new Family({
+        sendScore: (userInfo) => {
+            console.log(userInfo)
         }
     })
 }

@@ -1,11 +1,15 @@
 class Students {
     constructor({
-        parentHandle
+        parentHandle,
+        getStudentInfo,
     }) {
         this.parentHandle = parentHandle
         this.container = document.getElementById("school")
         this.status = 1
         this._init()
+        // 传递信息到父组件
+        this.getStudentInfo = getStudentInfo
+        this._createStudent()
     }
     _init() {
         this.container.innerHTML = "点击测试父組件的方法"
@@ -23,6 +27,15 @@ class Students {
         this.status = !this.status
         // 抛出回调
         this.parentHandle(resetStatus)
+    }
+    _createStudent() {
+        this.studentInfo = {
+            name: "Stephen Curry",
+            age: 30
+        }
+        if (this.studentInfo) {
+            this.getStudentInfo(this.studentInfo)
+        }
     }
 }
 

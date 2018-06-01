@@ -122,7 +122,7 @@ import Students from "./other/students"
 
 class School {
     constructor({
-        parentHandle
+        parentHandle,
     }) {
         // 方式1、外部传入
         // this.parentHandle = parentHandle
@@ -130,7 +130,8 @@ class School {
     }
     _init() {
         this.studentsOne = new Students({
-            parentHandle: this.parentHandle
+            parentHandle: this.parentHandle,
+            getStudentInfo: this._getUserInfo
         })
     }
     // 方式、2声明在内部
@@ -139,6 +140,12 @@ class School {
             console.log("打开！")
         } else {
             console.log("关闭！")
+        }
+    }
+    // 从子组件传递信息过来
+    _getUserInfo(info) {
+        if (info) {
+            console.log(info)
         }
     }
 }

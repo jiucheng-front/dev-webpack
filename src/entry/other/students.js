@@ -2,7 +2,9 @@ class Students {
     constructor({
         parentHandle,
         getStudentInfo,
+        _this,
     }) {
+        this._parent = _this
         this.parentHandle = parentHandle
         this.container = document.getElementById("school")
         this.status = 1
@@ -30,11 +32,12 @@ class Students {
     }
     _createStudent() {
         this.studentInfo = {
+            id: 1,
             name: "Stephen Curry",
             age: 30
         }
         if (this.studentInfo) {
-            this.getStudentInfo(this.studentInfo)
+            this.getStudentInfo(this._parent, this.studentInfo)
         }
     }
 }

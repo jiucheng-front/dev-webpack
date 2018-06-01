@@ -117,25 +117,34 @@ testDom.addEventListener("click", function () {
  *
  */
 
-
+// School-Students父子模块通信
 import Students from "./other/students"
-
+import {
+    userInfo
+} from "os";
 class School {
     constructor({
         parentHandle,
+        sendScore,
     }) {
         // 方式1、外部传入
         // this.parentHandle = parentHandle
+        this.sendScore = sendScore
         this._init()
     }
     _init() {
+        // this=School
+        console.log(this, "1")
         this.studentsOne = new Students({
             parentHandle: this.parentHandle,
-            getStudentInfo: this._getUserInfo
+            getStudentInfo: this._getUserInfo,
+            _this: this,
         })
     }
     // 方式、2声明在内部
     parentHandle(status) {
+        // this= Students
+        console.log(this, "2")
         if (status == 1) {
             console.log("打开！")
         } else {
@@ -143,20 +152,60 @@ class School {
         }
     }
     // 从子组件传递信息过来
-    _getUserInfo(info) {
+    _getUserInfo(_this, info) {
+        // this= Students
+        console.log(this, "3")
         if (info) {
             console.log(info)
+            console.log(this, "123")
+            _this._testing(info)
+        }
+    }
+    // 考试
+    _testing(info) {
+        // this= School
+        if (info.id == 1) {
+            info.score = 96
+            if (info && info.score) {
+                this.sendScore(info)
+            }
         }
     }
 }
 
-let school = new School({
-    // 1、外部传入
-    parentHandle: (state) => {
-        if (state == 1) {
-            console.log("有学生迟到了！！")
-        } else {
-            console.log("今天没有学生迟到~")
+// class Family {
+//     constructor({
+//         sendScore,
+//     }) {
+//         this.sendScore
+//     }
+// }
+let PudongArea = {
+    school: new School({
+        // 1、外部传入
+        parentHandle: (state) => {
+            if (state == 1) {
+                console.log("有学生迟到了！！")
+            } else {
+                console.log("今天没有学生迟到~")
+            }
+        },
+        sendScore: (userInfo) => {
+            if (userInfo) {
+                console.log(userInfo, "用户1")
+            }
         }
-    }
-})
+    })
+}
+console.log(PudongArea)
+// let school = new School({
+//     // 1、外部传入
+//     parentHandle: (state) => {
+//         if (state == 1) {
+//             console.log("有学生迟到了！！")
+//         } else {
+//             console.log("今天没有学生迟到~")
+//         }
+//     },
+// })
+// School - Family 兄弟模块通信

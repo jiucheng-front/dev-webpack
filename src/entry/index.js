@@ -171,45 +171,42 @@ class School {
     }
 }
 
+// School - Family 兄弟模块通信
 class Family {
     constructor({
-        sendScore,
+        userInfo,
     }) {
-        this.getScore = sendScore
+        this.userInfo = userInfo
+        console.log(this.info, "11111")
+        if (this.userInfo) {
+            this._getScore()
+        }
+        this._getMessage()
+    }
+    _getScore() {
+        console.log(this.userInfo, "11111")
+    }
+    _getMessage(){
+        console.log("拿到分数")
     }
 }
-let PudongArea = {
-    school: new School({
-        // 1、外部传入
-        parentHandle: (state) => {
-            if (state == 1) {
-                console.log("有学生迟到了！！")
-            } else {
-                console.log("今天没有学生迟到~")
-            }
-        },
-        sendScore: (userInfo) => {
-            if (userInfo) {
-                console.log(this, "PudongArea")
-                console.log(userInfo, "用户1")
-            }
+
+let pudongSchool = new School({
+    // 1、外部传入
+    parentHandle: (state) => {
+        if (state == 1) {
+            console.log("有学生迟到了！！")
+        } else {
+            console.log("今天没有学生迟到~")
         }
-    }),
-    family: new Family({
-        sendScore: (userInfo) => {
-            console.log(userInfo)
+    },
+    sendScore: (userInfo) => {
+        if (userInfo) {
+            console.log(userInfo, "用户1考试结束")
+            let curryFamily = new Family({
+                userInfo
+            })
         }
-    })
-}
-console.log(PudongArea)
-// let school = new School({
-//     // 1、外部传入
-//     parentHandle: (state) => {
-//         if (state == 1) {
-//             console.log("有学生迟到了！！")
-//         } else {
-//             console.log("今天没有学生迟到~")
-//         }
-//     },
-// })
-// School - Family 兄弟模块通信
+    }
+})
+console.log(pudongSchool)

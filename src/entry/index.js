@@ -117,8 +117,8 @@ testDom.addEventListener("click", function () {
  *
  */
 
-// School - Family 兄弟模块通信
-// School-Students父子模块通信
+// School - Family 兄弟模块通信(相对于JS的回调函数)
+// School-Students父子模块通信(相对于JS的回调函数)
 import School from "./modules/School"
 import Family from "./modules/Family"
 

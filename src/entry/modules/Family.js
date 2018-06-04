@@ -1,5 +1,5 @@
 
-// School - Family 兄弟模块通信
+// School - Family 兄弟模块通信(相对于JS的回调函数)
 class Family {
     constructor({
         userInfo,

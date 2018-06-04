@@ -1,5 +1,5 @@
 
-// School-Students父子模块通信
+// School-Students父子模块通信(相对于JS的回调函数)
 import Students from "./students"
 
 class School {

@@ -141,3 +141,9 @@ let pudongSchool = new School({
     }
 })
 console.log(pudongSchool)
+
+// 八、使用mockjs mock data
+import MockData from "./mock/Mock"
+
+let mockList = JSON.parse(MockData)
+console.log(mockList,"MockData")

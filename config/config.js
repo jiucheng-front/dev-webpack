@@ -1,3 +1,5 @@
+var path = require('path')
+
 module.exports = {
     dev: {
         // 项目开发html模板
@@ -17,9 +19,8 @@ module.exports = {
         time: "",
         // 打包到指定文件夹下
         // outputProjectPath:"src\/html\/web\/webpack-demo",
-        outputProjectPath: "build\/webpack-demo",
+        outputProjectPath: path.resolve(__dirname, '../build'),
         // prod.js 内再次打包需要删除的选项
-        // cleanLsit:["src/html/web/webpack-demo/css","src/html/web/webpack-demo/js","src/html/web/webpack-demo/index.html"],
-        cleanLsit: ["build/webpack-demo/css", "build/webpack-demo/js", "build/webpack-demo/index.html"],
+        cleanLsit: [path.resolve(__dirname, '../dist')],
     }
 }

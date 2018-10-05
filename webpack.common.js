@@ -134,6 +134,14 @@ module.exports = {
                 use:{
                     loader:"pug-loader"
                 }
+            },
+
+            // 7 添加ts-loader 编译typescript,ts或者tsx结尾
+            {
+                test: /\.tsx?$/,
+                use: {
+                    loader: 'ts-loader'
+                }
             }
 
         ]

@@ -40,3 +40,9 @@
 + .gitignore：github提交的时候想要忽略提交的配置
 +  package.json：项目所需要的依赖包以及配置说明。
 + .html和.ejs都是HTML模板样式，最终会自动添加到指定目录内
+
+### 四、webpack中如何使用typeScript
++ npm install -D typescript
++ npm install -D ts-loader@3.1.1 //webpack4.0之前用低版本的loader
++ 配置tsconfig.json
++ rule中添加编译ts/tsx编译选项

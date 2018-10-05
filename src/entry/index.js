@@ -147,3 +147,14 @@ import MockData from "@src/mock/Mock"
 
 let mockList = JSON.parse(MockData)
 console.log(mockList,"MockData")
+
+
+// 
+import {greeter} from '@src/modules/Greeting.ts'
+
+let user = {
+    firstName:'Jason',
+    lastName:'Statham'
+}
+
+document.getElementById("typeScript").innerHTML = greeter(user)

@@ -149,12 +149,24 @@ let mockList = JSON.parse(MockData)
 console.log(mockList,"MockData")
 
 
-// 
+// 初识
 import {greeter} from '@src/modules/Greeting.ts'
 
 let user = {
     firstName:'Jason',
-    lastName:'Statham'
+    lastName:'Statham',
+    age:28,
 }
 
 document.getElementById("typeScript").innerHTML = greeter(user)
+
+
+// class
+import {Greeter,anyType,getEnum} from '@modules/Greeter.ts'
+
+let speak = new Greeter('Hello TypeSxript', 98 ,'test-script')
+
+let curry = anyType('I am Steven Kurry')
+console.log(`${curry}---from type script.`)
+
+getEnum()

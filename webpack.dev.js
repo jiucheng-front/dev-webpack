@@ -33,6 +33,7 @@ module.exports = merge(common, {
         alias:{
             "@src":path.resolve(__dirname, 'src'),
             "@components":path.resolve(__dirname, 'src/components'),
+            "@common":path.resolve(__dirname, 'src/common'),
             "@modules":path.resolve(__dirname, 'src/modules'),
         }
     }

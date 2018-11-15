@@ -32,7 +32,6 @@ require("../md/github.css")
 // 1119 test less
 require("../styles/less_mixin.less")
 
-// require("../styles/mixin.scss")
 // test stylus
 require("../styles/test.styl")
 import Markdown from "../md/markdown"
@@ -91,8 +90,8 @@ mainDom.innerHTML = mainStr
 // 五、2 测试异步组件
 let testDom = document.getElementById("test")
 
-testDom.addEventListener("click", function () {
-    require.ensure([], function () {
+testDom.addEventListener("click", function() {
+    require.ensure([], function() {
         var test = require('./test.js')
         test()
     })
@@ -146,27 +145,27 @@ console.log(pudongSchool)
 import MockData from "@src/mock/Mock"
 
 let mockList = JSON.parse(MockData)
-console.log(mockList,"MockData")
+console.log(mockList, "MockData")
 
 
 // 初识
-import {greeter} from '@src/modules/Greeting.ts'
+import { greeter } from '@common/Greeting.ts'
 
 let user = {
-    firstName:'Jason',
-    lastName:'Statham',
-    age:28,
+    firstName: 'Jason',
+    lastName: 'Statham',
+    age: 28,
 }
 
 document.getElementById("typeScript").innerHTML = greeter(user)
 
 
 // class
-import {Greeter,anyType,getEnum} from '@modules/Greeter.ts'
+import { Greeter, anyType, getEnum } from '@common/Greeter.ts'
 
-let speak = new Greeter('Hello TypeSxript', 98 ,'test-script')
+let speak = new Greeter('Hello TypeSxript', 98, 'test-script')
 
 let curry = anyType('I am Steven Kurry')
-console.log(`${curry}---from type script.`)
+console.log(`${curry}---from type script, anyType`)
 
 getEnum()

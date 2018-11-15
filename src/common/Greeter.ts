@@ -33,7 +33,7 @@ function add(x: number, y: number): number {
     return x + y;
 }
 
-// 函数的可选蚕食
+// 函数的可选参数
 function getName(firstName: string, lastName?: string) {
     if (lastName) {
         return firstName + ' ' + lastName
@@ -48,7 +48,7 @@ function buildName(firstName: string, lastName = 'Statham') {
 }
 
 
-// 剩余参数,不确定蚕食的个数
+// 剩余参数,不确定参数的个数
 function setName(firstName: string, ...restOption: string[]) {
     return firstName + ' ' + restOption.join(' ');
 }
@@ -77,7 +77,7 @@ enum Enum {
 let a = Enum.A
 let enumOf = Enum[Enum.A]
 
-// 常亮枚举
+// 常量枚举
 const enum Directions {
     Up,
     Down,

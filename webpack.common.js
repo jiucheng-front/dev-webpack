@@ -42,19 +42,21 @@ module.exports = {
                     ]
                 })
             },
-            { //1.2.SASS的.scss 文件使用 style-loader、css-loader 和 sass-loader 来编译处理
-                test: /\.scss$/,
-                // 6.2 想抽离出来得（node-sass经常安装失败，建议放弃）
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: [
-                        "css-loader",
-                        // "postcss-loader",
-                        { loader: 'postcss-loader', options: { sourceMap: true } },
-                        "sass-loader"
-                    ]
-                })
-            },
+            //1.2.SASS的.scss 文件使用 style-loader、css-loader 和 sass-loader 来编译处理(node-sass npm 包很难安装移除)
+            // { 
+            //     test: /\.scss$/,
+            //     // 6.2 想抽离出来得（node-sass经常安装失败，建议放弃）
+            //     use: ExtractTextPlugin.extract({
+            //         fallback: 'style-loader',
+            //         use: [
+            //             "css-loader",
+            //             // "postcss-loader",
+            //             { loader: 'postcss-loader', options: { sourceMap: true } },
+            //             "sass-loader"
+            //         ]
+            //     })
+            // },
+            
             // 1.3 引入less-loader,编译less
             {
                 test:/\.less$/,

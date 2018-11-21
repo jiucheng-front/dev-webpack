@@ -37,7 +37,6 @@ require("../styles/test.styl")
 import Markdown from "../md/markdown"
 // Markdown.init();
 
-
 /**
  * 五、使用pug 组件
  * https://github.com/pugjs/pug-loader
@@ -167,5 +166,10 @@ let speak = new Greeter('Hello TypeSxript', 98, 'test-script')
 
 let curry = anyType('I am Steven Kurry')
 console.log(`${curry}---from type script, anyType`)
+
+
+// 
+import { RankList } from "../common/TypeScript.ts"
+console.log(RankList, `RankList`)
 
 getEnum()

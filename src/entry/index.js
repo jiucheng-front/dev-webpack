@@ -167,6 +167,10 @@ let speak = new Greeter('Hello TypeSxript', 98, 'test-script')
 let curry = anyType('I am Steven Kurry')
 console.log(`${curry}---from type script, anyType`)
 
+import { Employee } from '../common/Person.ts'
+var Em1 = new Employee('Jack', '1')
+Em1.work()
+
 
 // 
 import { RankList } from "../common/TypeScript.ts"

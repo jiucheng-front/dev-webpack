@@ -158,7 +158,14 @@ let user = {
 
 document.getElementById("typeScript").innerHTML = greeter(user)
 
-
+/** 
+ * typescript
+ *  
+ */
+// readonly array
+import { RankList } from "../common/TypeScript.ts"
+console.log(RankList, `RankList`)
+getEnum()
 // class
 import { Greeter, anyType, getEnum } from '@common/Greeter.ts'
 
@@ -166,14 +173,15 @@ let speak = new Greeter('Hello TypeSxript', 98, 'test-script')
 
 let curry = anyType('I am Steven Kurry')
 console.log(`${curry}---from type script, anyType`)
-
-import { Employee } from '../common/Person.ts'
+// class extends ans super
+import { Employee, Worker } from '../common/Person.ts'
 var Em1 = new Employee('Jack', '1')
 Em1.work()
 
+// class get set
+let worker2 = new Worker()
+worker2.fullname = 'Stephen Kurry'
+if (worker2.fullname) {
+    console.log(worker2.fullname)
+}
 
-// 
-import { RankList } from "../common/TypeScript.ts"
-console.log(RankList, `RankList`)
-
-getEnum()

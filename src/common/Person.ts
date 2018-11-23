@@ -32,6 +32,21 @@ class Employee extends Person {
     }
 }
 
+// get set
+const passCode = '123456'
+class Worker {
+    private _fullName: string;
+    get fullName() {
+        return this._fullName;
+    }
+    set fullName(newName: string) {
+        if (passCode && passCode === "123456") {
+            this._fullName = newName
+        } else {
+            console.log(`Error: Unauthorized update name!`)
+        }
+    }
+}
 
 
-export { Employee }
+export { Employee, Worker }

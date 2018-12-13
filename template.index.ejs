@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
@@ -8,7 +9,9 @@
     <meta name="MobileOptimized" content="320" />
     <meta name="format-detection" content="telephone=no" />
     <meta http-equiv="cleartype" content="on" />
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
 </head>
 
 <body>
@@ -34,6 +37,30 @@
     <div id="school" class="school"></div>
     <!-- calss set,get,static -->
     <div id="static">點我</div>
+    <!-- Array -->
+    <style>
+        #array li {
+            display: inline-block;
+            margin-left: 10px;
+            line-height: 26px;
+            padding: 5px 10px;
+            cursor: pointer;
+            /* color: #e4393c; */
+        }
+
+        #array li.active {
+            color: #e4393c;
+        }
+    </style>
+    <ul id="array">
+        <li data-id='0' data-value='aaa'>AAA</li>
+        <li data-id='1' data-value='bbb'>BBB</li>
+        <li data-id='2' data-value='ccc'>CCC</li>
+        <li data-id='3' data-value='ddd'>DDD</li>
+        <li data-id='4' data-value='eee'>EEE</li>
+        <li data-id='5' data-value='fff'>FFF</li>
+    </ul>
     <footer></footer>
 </body>
+
 </html>

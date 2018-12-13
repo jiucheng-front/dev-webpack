@@ -185,3 +185,6 @@ if (worker2.fullname) {
     console.log(worker2.fullname)
 }
 
+// Array
+import { TestCheckbox } from "./TestCheckbox"
+new TestCheckbox()

@@ -15,8 +15,8 @@ module.exports = merge(common, {
         inline: true,
         port: CONFIG.dev.port,
         //2、 指定本地电脑的IP作为host,方便同一个局域网手机查看效果，请填写自己本机的IP地址或者localhost
-        // host: "172.16.9.142",
-        host: "localhost",
+        host: "http://192.168.9.97/",
+        // host: "localhost",
         //3、 是否需要跨域去请求接口本地测试
         proxy: {
             "/api": {
